@@ -42,9 +42,38 @@ enum MachReport {
         let session = CrashSessionStore.session(for: report)
         if session.hasBeenHandled || session.collected { return }
 
-        let sig = IvarAccess.int32(report, "_signal") ?? 0
-        session.processName = IvarAccess.string(report, "_procName") ?? ""
-        if sig == 0 || sig == SIGKILL || CR4IsProcessBlacklisted(session.processName) { return }
+        var procName = IvarAccess.string(report, "_procName") ?? ""
+        if procName.isEmpty {
+            let sel = NSSelectorFromString("procName")
+            if report.responds(to: sel), let name = report.perform(sel)?.takeUnretainedValue() as? String {
+                procName = name
+            }
+        }
+        if procName.isEmpty, let path = IvarAccess.string(report, "_procPath") {
+            procName = (path as NSString).lastPathComponent
+        }
+        session.processName = procName.isEmpty ? "Unknown" : procName
+
+        var sig = IvarAccess.int32(report, "_signal") ?? 0
+        let excType = IvarAccess.int32(report, "_exceptionType") ?? 0
+        if sig == 0 {
+            if let decoded = decodeSignal(report), let s = signalFromName(decoded) {
+                sig = s
+            }
+            if sig == 0 {
+                if let ptr = IvarAccess.value(report, "_exceptionCode", as: UnsafePointer<Int64>?.self),
+                   let count = IvarAccess.uint32(report, "_exceptionCodeCount"), count > 0,
+                   let ptr {
+                    let code0 = ptr[0]
+                    if excType == EXC_CRASH || excType == EXC_CORPSE_NOTIFY || excType == EXC_SOFTWARE {
+                        sig = Int32(code0 & 0xff)
+                    }
+                }
+            }
+        }
+
+        if sig == 0 && excType == 0 { return }
+        if sig == SIGKILL || CR4IsProcessBlacklisted(session.processName) { return }
 
         var codes: [Int64] = []
         if let count = IvarAccess.uint32(report, "_exceptionCodeCount"),
@@ -61,10 +90,10 @@ enum MachReport {
             else { codes[1] = Int64(bitPattern: session.far) }
         }
 
-        if isNonFatal(report) { return }
+        if isNonFatal(report, sig: sig) { return }
 
         session.bundleID = IvarAccess.string(report, "_bundle_id") ?? ""
-        let signalName = decodeSignal(report) ?? "SIGNUNKN"
+        let signalName = decodeSignal(report) ?? (sig == SIGABRT ? "SIGABRT" : "SIGNUNKN")
         session.exceptionType = MachStrings.exceptionName(exception, signal: signalName)
         session.exceptionSubtype = MachStrings.codeString(type: exception, codes: codes) ?? ""
         session.exceptionCodes = MachStrings.codesHex(codes)
@@ -121,6 +150,8 @@ enum MachReport {
             crashReason = swift
         } else if !session.terminationReason.isEmpty {
             crashReason = session.terminationReason
+        } else if session.exceptionType.contains("SIGABRT") {
+            crashReason = "\(session.exceptionType): Process called abort() or assertion failed"
         } else if !session.exceptionSubtype.isEmpty {
             crashReason = "\(session.exceptionType): \(session.exceptionSubtype)"
             if let vm = session.vmInfo, !vm.isEmpty {
@@ -188,12 +219,30 @@ enum MachReport {
         session.images = []
     }
 
-    private static func isNonFatal(_ report: AnyObject) -> Bool {
+    private static func isNonFatal(_ report: AnyObject, sig: Int32) -> Bool {
+        if sig == SIGABRT || sig == SIGSEGV || sig == SIGBUS || sig == SIGILL || sig == SIGTRAP || sig == SIGFPE {
+            return false
+        }
         let sel = NSSelectorFromString("isExceptionNonFatal")
         if report.responds(to: sel) {
             return CR4BoolMessage(report, sel)
         }
         return false
+    }
+
+    private static func signalFromName(_ name: String) -> Int32? {
+        switch name {
+        case "SIGSEGV": return SIGSEGV
+        case "SIGBUS": return SIGBUS
+        case "SIGABRT": return SIGABRT
+        case "SIGTRAP": return SIGTRAP
+        case "SIGILL": return SIGILL
+        case "SIGFPE": return SIGFPE
+        case "SIGSYS": return SIGSYS
+        case "SIGPIPE": return SIGPIPE
+        case "SIGKILL": return SIGKILL
+        default: return nil
+        }
     }
 
     private static func decodeSignal(_ report: AnyObject) -> String? {

@@ -104,12 +104,12 @@ NSString *CR4WriteLog(NSString *contents, NSString *filename) {
 
 bool CR4IsProcessBlacklisted(NSString *procName) {
     if (!procName.length) procName = [NSProcessInfo processInfo].processName;
+    if (CR4IsHardBlacklisted(procName)) return true;
     NSArray *blacklist = CR4PrefsBlacklist();
     if ([blacklist isKindOfClass:[NSArray class]] && [blacklist containsObject:procName]) {
         return true;
     }
-    NSDictionary *reply = CR4XPCSend(CR4XPCIsBlacklisted, @{@"value": procName});
-    return [reply[@"ret"] boolValue];
+    return false;
 }
 
 bool CR4ShouldLogJetsam(void) {
@@ -186,14 +186,23 @@ NSString *CR4LocalWriteLog(NSString *contents, NSString *rawName) {
 
 void CR4SendNotification(NSString *content, NSString *logPath) {
     if (!content.length) return;
-    NSMutableDictionary *info = [NSMutableDictionary dictionary];
-    info[@"content"] = content;
-    if (logPath.length) info[@"logPath"] = logPath;
-    CR4XPCSend(CR4XPCWriteString, @{
-        @"string": @"",
-        @"filename": @"",
-        @"notifyOnly": @YES,
-        @"content": content,
-        @"logPath": logPath ?: @""
-    });
+    CR4XPCResolve();
+    if (!CR4XPCCreateMachServicePtr) return;
+    xpc_connection_t connection = CR4XPCCreateMachServicePtr(CR4SHED_DAEMON_MACH, NULL, (1ull << 0));
+    if (!connection) return;
+    xpc_connection_set_event_handler(connection, ^(xpc_object_t object) {});
+    xpc_connection_resume(connection);
+
+    xpc_object_t message = xpc_dictionary_create(NULL, NULL, 0);
+    xpc_dictionary_set_int64(message, "id", CR4XPCWriteString);
+    xpc_object_t userDict = xpc_dictionary_create(NULL, NULL, 0);
+    xpc_dictionary_set_string(userDict, "string", "");
+    xpc_dictionary_set_string(userDict, "filename", "");
+    xpc_dictionary_set_bool(userDict, "notifyOnly", true);
+    xpc_dictionary_set_string(userDict, "content", content.UTF8String ?: "");
+    if (logPath.length) xpc_dictionary_set_string(userDict, "logPath", logPath.UTF8String);
+    xpc_dictionary_set_value(message, "userInfo", userDict);
+
+    // 异步非阻塞发送通知，不等待守护进程应答，杜绝 ReportCrash 挂起或高 CPU 假死
+    xpc_connection_send_message(connection, message);
 }

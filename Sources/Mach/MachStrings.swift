@@ -33,10 +33,10 @@ enum MachStrings {
             if code == Int64(KERN_INVALID_ADDRESS) { name = "KERN_INVALID_ADDRESS" }
             else if code == Int64(KERN_PROTECTION_FAILURE) { name = "KERN_PROTECTION_FAILURE" }
             else { name = String(format: "0x%llx", code) }
-        } else if type == EXC_SOFTWARE {
+        } else if type == EXC_SOFTWARE || type == EXC_CRASH {
             if code == 0x10000 { name = "EXC_UNIX_BAD_SYSCALL" }
             else if code == 0x10001 { name = "EXC_UNIX_BAD_PIPE" }
-            else if code == 0x10002 { name = "EXC_UNIX_ABORT" }
+            else if code == 0x10002 || code == 6 { name = "SIGABRT / abort()" }
             else if code == 0x10003 { name = "EXC_SOFT_SIGNAL" }
             else { name = String(format: "0x%llx", code) }
         } else {
@@ -59,7 +59,7 @@ enum MachStrings {
         case SIGFPE: return (EXC_ARITHMETIC, 0)
         case SIGSYS: return (EXC_SOFTWARE, 0x10000)
         case SIGPIPE: return (EXC_SOFTWARE, 0x10001)
-        case SIGABRT: return (EXC_SOFTWARE, 0x10002)
+        case SIGABRT: return (EXC_CRASH, 6)
         case SIGKILL: return (EXC_SOFTWARE, 0x10003)
         case SIGTRAP: return (EXC_BREAKPOINT, 0)
         default: return (0, 0)

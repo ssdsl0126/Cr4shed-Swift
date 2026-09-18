@@ -55,26 +55,23 @@ NSString *CR4NameForLocalSymbol(NSNumber *addrNum, uint64_t *outOffset) {
 }
 
 mach_vm_address_t CR4FindSymbolInTask(mach_port_t task, const char *symbolName, NSString *lastPathComponent, NSString **imageName) {
+    if (!task || !symbolName || !lastPathComponent.length) return 0;
     CSSymbolicatorRef symbolicator = CSSymbolicatorCreateWithTask(task);
     if (CSIsNull(symbolicator)) return 0;
-    __block mach_vm_address_t addr = 0;
-    __block NSString *imagePath = nil;
-    CSSymbolicatorForeachSymbolAtTime(symbolicator, kCSNow, ^int(CSSymbolRef symbol) {
-        if (CSIsNull(symbol)) return 1;
-        const char *name = CSSymbolGetMangledName(symbol);
-        if (!name || !symbolName || strcmp(name, symbolName) != 0) return 1;
-        mach_vm_address_t symAddr = CSSymbolGetRange(symbol).location;
-        CSSymbolOwnerRef owner = CSSymbolGetSymbolOwner(symbol);
-        if (CSIsNull(owner)) return 1;
-        const char *c_path = CSSymbolOwnerGetPath(owner);
-        NSString *path = c_path ? @(c_path) : nil;
-        if ([path.lastPathComponent isEqualToString:lastPathComponent]) {
-            addr = symAddr - CSSymbolOwnerGetBaseAddress(owner);
-            imagePath = path;
-            return 0;
+    mach_vm_address_t addr = 0;
+    NSString *imagePath = nil;
+    
+    // 优先通过 SymbolOwner 快速定位特定模块，避免遍历进程几十万个符号导致 ReportCrash 占用 100% CPU
+    CSSymbolOwnerRef owner = CSSymbolicatorGetSymbolOwnerWithNameAtTime(symbolicator, [lastPathComponent UTF8String], kCSNow);
+    if (!CSIsNull(owner)) {
+        CSSymbolRef symbol = CSSymbolOwnerGetSymbolWithName(owner, symbolName);
+        if (!CSIsNull(symbol)) {
+            addr = CSSymbolGetRange(symbol).location - CSSymbolOwnerGetBaseAddress(owner);
+            const char *c_path = CSSymbolOwnerGetPath(owner);
+            if (c_path) imagePath = [NSString stringWithUTF8String:c_path];
         }
-        return 1;
-    });
+    }
+    
     CSRelease(symbolicator);
     if (imageName) *imageName = imagePath;
     return addr;
