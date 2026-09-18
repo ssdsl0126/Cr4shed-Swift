@@ -117,31 +117,15 @@ static void CR4UnhandledExceptionHandler(NSException *e) {
     }
 }
 
-static void (*orig_NSSetUncaughtExceptionHandler)(NSUncaughtExceptionHandler *);
-static NSUncaughtExceptionHandler *(*orig_NSGetUncaughtExceptionHandler)(void);
-
-static void hooked_NSSetUncaughtExceptionHandler(NSUncaughtExceptionHandler *handler) {
-    @autoreleasepool {
-        if (handler != &CR4UnhandledExceptionHandler) {
-            oldHandler = handler;
-            return;
-        }
-        if (orig_NSSetUncaughtExceptionHandler) orig_NSSetUncaughtExceptionHandler(handler);
-    }
-}
-
-static NSUncaughtExceptionHandler *hooked_NSGetUncaughtExceptionHandler(void) {
-    return oldHandler;
-}
-
 __attribute__((constructor))
 static void CR4ExceptionInit(void) {
     @autoreleasepool {
-        if (CR4IsHardBlacklisted([[NSProcessInfo processInfo] processName])) return;
-        NSLog(@"[Cr4shedException] Installed exception handler in %@", [[NSProcessInfo processInfo] processName]);
+        NSString *procName = [[NSProcessInfo processInfo] processName];
+        if (CR4IsHardBlacklisted(procName)) return;
+        
+        // 直接安全注册未捕获异常处理，不再使用 MSHookFunction 改写 Foundation 共享缓存
+        // 彻底根除因改写 12 字节微型函数破坏临近指令引起的全局 CPU 飙升与死锁
         oldHandler = NSGetUncaughtExceptionHandler();
         NSSetUncaughtExceptionHandler(&CR4UnhandledExceptionHandler);
-        CR4HookFunction((void *)&NSSetUncaughtExceptionHandler, (void *)hooked_NSSetUncaughtExceptionHandler, (void **)&orig_NSSetUncaughtExceptionHandler);
-        CR4HookFunction((void *)&NSGetUncaughtExceptionHandler, (void *)hooked_NSGetUncaughtExceptionHandler, (void **)&orig_NSGetUncaughtExceptionHandler);
     }
 }
