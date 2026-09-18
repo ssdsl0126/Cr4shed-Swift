@@ -1,0 +1,16 @@
+{
+  "" : {
+    "const-values" : "/Users/ssdsl/Desktop/Cr4shed-Swift/build/DerivedData/Build/Intermediates.noindex/Cr4shed.build/Release-iphoneos/Cr4shedJetsam.build/Objects-normal/arm64/Cr4shedJetsam-primary.swiftconstvalues",
+    "dependencies" : "/Users/ssdsl/Desktop/Cr4shed-Swift/build/DerivedData/Build/Intermediates.noindex/Cr4shed.build/Release-iphoneos/Cr4shedJetsam.build/Objects-normal/arm64/Cr4shedJetsam-primary.d",
+    "diagnostics" : "/Users/ssdsl/Desktop/Cr4shed-Swift/build/DerivedData/Build/Intermediates.noindex/Cr4shed.build/Release-iphoneos/Cr4shedJetsam.build/Objects-normal/arm64/Cr4shedJetsam-primary.dia",
+    "emit-module-dependencies" : "/Users/ssdsl/Desktop/Cr4shed-Swift/build/DerivedData/Build/Intermediates.noindex/Cr4shed.build/Release-iphoneos/Cr4shedJetsam.build/Objects-normal/arm64/Cr4shedJetsam-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/ssdsl/Desktop/Cr4shed-Swift/build/DerivedData/Build/Intermediates.noindex/Cr4shed.build/Release-iphoneos/Cr4shedJetsam.build/Objects-normal/arm64/Cr4shedJetsam-primary-emit-module.dia",
+    "pch" : "/Users/ssdsl/Desktop/Cr4shed-Swift/build/DerivedData/Build/Intermediates.noindex/Cr4shed.build/Release-iphoneos/Cr4shedJetsam.build/Objects-normal/arm64/Cr4shedJetsam-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/ssdsl/Desktop/Cr4shed-Swift/build/DerivedData/Build/Intermediates.noindex/Cr4shed.build/Release-iphoneos/Cr4shedJetsam.build/Objects-normal/arm64/Cr4shedJetsam-primary.swiftdeps"
+  },
+  "/Users/ssdsl/Desktop/Cr4shed-Swift/Sources/Jetsam/JetsamTweak.swift" : {
+    "index-unit-output-path" : "/Cr4shed.build/Release-iphoneos/Cr4shedJetsam.build/Objects-normal/arm64/JetsamTweak.o",
+    "llvm-bc" : "/Users/ssdsl/Desktop/Cr4shed-Swift/build/DerivedData/Build/Intermediates.noindex/Cr4shed.build/Release-iphoneos/Cr4shedJetsam.build/Objects-normal/arm64/JetsamTweak.bc",
+    "object" : "/Users/ssdsl/Desktop/Cr4shed-Swift/build/DerivedData/Build/Intermediates.noindex/Cr4shed.build/Release-iphoneos/Cr4shedJetsam.build/Objects-normal/arm64/JetsamTweak.o"
+  }
+}

@@ -1,0 +1,35 @@
+/* Tab Bar */
+"Reports" = "Reports";
+"Settings" = "Settings";
+
+/* Process List */
+"Cr4shed" = "Cr4shed";
+"Clear" = "Clear";
+"Delete" = "Delete";
+"Blacklist" = "Blacklist";
+"Un-blacklist" = "Un-blacklist";
+
+/* Log Info View */
+"Crash Date" = "Crash Date";
+"Culprit" = "Culprit";
+"Reason" = "Reason";
+"View Log" = "View Log";
+"Unknown" = "Unknown";
+"N/A" = "N/A";
+"Export Failed" = "Export Failed";
+"Log file does not exist." = "Log file does not exist.";
+"OK" = "OK";
+
+/* Settings View */
+"General" = "General";
+"Process sorting method" = "Process sorting method";
+"Date" = "Date";
+"Name" = "Name";
+"Process blacklist" = "Process blacklist";
+"Log Jetsam Events" = "Log Jetsam Events";
+"Credits" = "Credits";
+"Follow @Muirey03 on Twitter" = "Follow @Muirey03 on Twitter";
+"Donate to help development" = "Donate to help development";
+
+/* Blacklist View */
+"Process name (Case-sensitive)" = "Process name (Case-sensitive)";

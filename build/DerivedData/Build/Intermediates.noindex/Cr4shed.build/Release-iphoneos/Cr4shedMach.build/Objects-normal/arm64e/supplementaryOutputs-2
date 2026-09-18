@@ -1,0 +1,12 @@
+{
+  "/Users/ssdsl/Desktop/Cr4shed-Swift/Sources/Mach/CrashSession.swift" : {
+    "abi-baseline-json" : "/Users/ssdsl/Desktop/Cr4shed-Swift/build/DerivedData/Build/Intermediates.noindex/Cr4shed.build/Release-iphoneos/Cr4shedMach.build/Objects-normal/arm64e/Cr4shedMach.abi.json",
+    "const-values" : "/Users/ssdsl/Desktop/Cr4shed-Swift/build/DerivedData/Build/Intermediates.noindex/Cr4shed.build/Release-iphoneos/Cr4shedMach.build/Objects-normal/arm64e/Cr4shedMach-primary.swiftconstvalues",
+    "dependencies" : "/Users/ssdsl/Desktop/Cr4shed-Swift/build/DerivedData/Build/Intermediates.noindex/Cr4shed.build/Release-iphoneos/Cr4shedMach.build/Objects-normal/arm64e/Cr4shedMach-primary.d",
+    "diagnostics" : "/Users/ssdsl/Desktop/Cr4shed-Swift/build/DerivedData/Build/Intermediates.noindex/Cr4shed.build/Release-iphoneos/Cr4shedMach.build/Objects-normal/arm64e/Cr4shedMach-primary.dia",
+    "objc-header" : "/Users/ssdsl/Desktop/Cr4shed-Swift/build/DerivedData/Build/Intermediates.noindex/Cr4shed.build/Release-iphoneos/Cr4shedMach.build/Objects-normal/arm64e/Cr4shedMach-Swift.h",
+    "swiftdoc" : "/Users/ssdsl/Desktop/Cr4shed-Swift/build/DerivedData/Build/Intermediates.noindex/Cr4shed.build/Release-iphoneos/Cr4shedMach.build/Objects-normal/arm64e/Cr4shedMach.swiftdoc",
+    "swiftmodule" : "/Users/ssdsl/Desktop/Cr4shed-Swift/build/DerivedData/Build/Intermediates.noindex/Cr4shed.build/Release-iphoneos/Cr4shedMach.build/Objects-normal/arm64e/Cr4shedMach.swiftmodule",
+    "swiftsourceinfo" : "/Users/ssdsl/Desktop/Cr4shed-Swift/build/DerivedData/Build/Intermediates.noindex/Cr4shed.build/Release-iphoneos/Cr4shedMach.build/Objects-normal/arm64e/Cr4shedMach.swiftsourceinfo"
+  }
+}

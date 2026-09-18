@@ -1,0 +1,7 @@
+#!/bin/sh
+echo "Unloading cr4shedd..."
+launchctl unload /var/jb/Library/LaunchDaemons/com.muirey03.cr4shedd.plist 2>/dev/null || true
+killall -9 ReportCrash 2>/dev/null || true
+killall -9 ReportMemoryException 2>/dev/null || true
+echo "Done!"
+exit 0

@@ -1,0 +1,35 @@
+/* 标签栏 */
+"Reports" = "报告";
+"Settings" = "设置";
+
+/* 进程列表 */
+"Cr4shed" = "Cr4shed";
+"Clear" = "清空";
+"Delete" = "删除";
+"Blacklist" = "加入黑名单";
+"Un-blacklist" = "移出黑名单";
+
+/* 日志详情 */
+"Crash Date" = "崩溃时间";
+"Culprit" = "罪魁祸首";
+"Reason" = "崩溃原因";
+"View Log" = "查看详细日志";
+"Unknown" = "未知";
+"N/A" = "无";
+"Export Failed" = "导出失败";
+"Log file does not exist." = "日志文件不存在。";
+"OK" = "好";
+
+/* 设置页面 */
+"General" = "通用";
+"Process sorting method" = "进程排序方式";
+"Date" = "按日期";
+"Name" = "按名称";
+"Process blacklist" = "进程黑名单";
+"Log Jetsam Events" = "记录 Jetsam (内存溢出) 事件";
+"Credits" = "致谢与支持";
+"Follow @Muirey03 on Twitter" = "关注原作者 @Muirey03 (Twitter)";
+"Donate to help development" = "捐赠支持原作者 (PayPal)";
+
+/* 黑名单页面 */
+"Process name (Case-sensitive)" = "进程名称 (区分大小写)";

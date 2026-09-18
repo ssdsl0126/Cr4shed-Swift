@@ -1,0 +1,1147 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00873D1FB72FA7E3C147A3B0 /* AppIcon60x60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 99161CDDB78E75D3C2524AB3 /* AppIcon60x60@3x.png */; };
+		00C558C36A2E5E1474542B5F /* HookSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 770DA0AC0A0BD30D638E1603 /* HookSupport.m */; };
+		083C8AA1906B50BDEE11CB8E /* RemoteMemory.m in Sources */ = {isa = PBXBuildFile; fileRef = DF67E2B0AFBED36C5E24BDFB /* RemoteMemory.m */; };
+		09925C6454D72B3A0CA61985 /* Symbolication.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC1F9A6ADA57483B35594FB /* Symbolication.m */; };
+		0EB1C010382C158993CEEC3A /* HookSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 770DA0AC0A0BD30D638E1603 /* HookSupport.m */; };
+		0EFC86CECB203C018689D911 /* PrivateXPC.h in Headers */ = {isa = PBXBuildFile; fileRef = 63999FFFE6EBE00CA25FB2EF /* PrivateXPC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		12510E290EE8DCF094188C53 /* AppIcon29x29@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F4882CB95E691F33EAFA02C /* AppIcon29x29@1x.png */; };
+		144E9EA1CD2227518A8E4BC4 /* MachReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1511BFBA155D39827472E7B1 /* MachReport.swift */; };
+		15225C809ABDA5A209064F33 /* Cr4shedXPC.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B682E91C6A79018D95DC58 /* Cr4shedXPC.m */; };
+		15F9CBB46BC7DA4606C084E0 /* HookSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 770DA0AC0A0BD30D638E1603 /* HookSupport.m */; };
+		17F002FA184D9D42F4703347 /* dyn.c in Sources */ = {isa = PBXBuildFile; fileRef = 2ECED7B080F146F8810008EF /* dyn.c */; };
+		1A8389893AD53D7440256900 /* Symbolication.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC1F9A6ADA57483B35594FB /* Symbolication.m */; };
+		1DC6BF5C5AF30AA5C05356EF /* Cr4shedCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 505D79814F3117608C93E673 /* Cr4shedCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22B9A2BC485D3FCBE1711BA7 /* Preferences.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFB463793F5EBFF2BE0B55D /* Preferences.m */; };
+		255C97161D3BA0EE3068D5CA /* Culprit.m in Sources */ = {isa = PBXBuildFile; fileRef = 28AAC4D2006054607F54EDFC /* Culprit.m */; };
+		265C88FA5BC87E6D3364E4F6 /* CrashLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DA41FF4A83271598F836D4 /* CrashLog.swift */; };
+		2AEF2D5989DDA97421AEB8CC /* dyn.c in Sources */ = {isa = PBXBuildFile; fileRef = 2ECED7B080F146F8810008EF /* dyn.c */; };
+		2BE054C44F5A7C59F6A2BA16 /* AppIcon20x20@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85CA039FB3E5E57E2C7A06B4 /* AppIcon20x20@2x.png */; };
+		2C0C2F2079A8EBC7DC17C212 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F14EDF7C45C69E3B6F7CA36C /* Localizable.strings */; };
+		2C216104105352671FC1E59D /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C15A49B31122BE9F9D010AA /* RootView.swift */; };
+		2DA9E93D9C6EEF6A7232156F /* PrivateXPC.h in Headers */ = {isa = PBXBuildFile; fileRef = 63999FFFE6EBE00CA25FB2EF /* PrivateXPC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2E89724238F49FC1EA70CD2D /* dyn.c in Sources */ = {isa = PBXBuildFile; fileRef = 2ECED7B080F146F8810008EF /* dyn.c */; };
+		312046C3F5B552FA510297BC /* CrashLogFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC52D2D77C6CFC9C2B443CF /* CrashLogFormat.m */; };
+		33D43B5BEF06F0F59FF935AE /* PrivateXPC.h in Headers */ = {isa = PBXBuildFile; fileRef = 63999FFFE6EBE00CA25FB2EF /* PrivateXPC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3811B58D49049B18398D330F /* RuntimeCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D40E22466696BB717E35D8 /* RuntimeCall.m */; };
+		38C41B8EE975E0BECEF3D275 /* FastTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB99ED32E63238D4D52C18A /* FastTextView.swift */; };
+		3DEA9868AD636E960D0D0F67 /* AppIcon83.5x83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B78BA563940086104134884 /* AppIcon83.5x83.5@2x.png */; };
+		3E68E80D3A9B831532BCA0CE /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F33E8ACAB65D95D923920B /* SettingsView.swift */; };
+		3E6AC8639370A521A2E6E943 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315690CCC211EC05BA96F6EA /* main.swift */; };
+		3FDB67894F9B8E50FDC2142D /* Jetsam-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EE81F2DD94BF73AD3EA81A3 /* Jetsam-Bridging-Header.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		42E9FB39C0C7D6CD96733BFB /* Cr4shedXPC.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B682E91C6A79018D95DC58 /* Cr4shedXPC.m */; };
+		432E7BA8CD24CE9893CDBB0D /* Preferences.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFB463793F5EBFF2BE0B55D /* Preferences.m */; };
+		441AF321D153A53E04043A55 /* Preferences.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFB463793F5EBFF2BE0B55D /* Preferences.m */; };
+		4EE401FF04C0F178059C4A41 /* IvarAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18141EC3422B638F7257A3EC /* IvarAccess.swift */; };
+		4F4A278CEA0994BF5BDEF74B /* Culprit.m in Sources */ = {isa = PBXBuildFile; fileRef = 28AAC4D2006054607F54EDFC /* Culprit.m */; };
+		515610E521C54D15F87DAFD0 /* Cr4shedCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 505D79814F3117608C93E673 /* Cr4shedCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55EE3319C69FBAABB911E45E /* Symbolication.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC1F9A6ADA57483B35594FB /* Symbolication.m */; };
+		57BFCF3B72FCB5E29C505CF0 /* CrashLogFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC52D2D77C6CFC9C2B443CF /* CrashLogFormat.m */; };
+		6111084D3153D11896AE2A72 /* ProcessStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1090C22F44170C84F279B294 /* ProcessStore.swift */; };
+		64B4D643E468D3C63B4AAE03 /* AppIcon40x40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D1093F6C92F6220CDA5DBAEE /* AppIcon40x40@2x.png */; };
+		681F4B69EFE478669D1FE515 /* AppIcon20x20@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD812B0599C704C1E842A414 /* AppIcon20x20@3x.png */; };
+		69A0F2B8C76ABAC4687A8645 /* Cr4shedApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A285B14D53834EFC394E27 /* Cr4shedApp.swift */; };
+		69A2E733AB2C6C8822F54A9D /* JetsamTweak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5EE0D1B9E47FA100D8DF83 /* JetsamTweak.swift */; };
+		6CD78308AA123D3BCA27F486 /* JailbreakPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5B2908CAB44000BC262977 /* JailbreakPath.m */; };
+		6EA2BA338E6346E64296080E /* dyn.c in Sources */ = {isa = PBXBuildFile; fileRef = 2ECED7B080F146F8810008EF /* dyn.c */; };
+		7370938919BC27F1C8297B47 /* JailbreakPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5B2908CAB44000BC262977 /* JailbreakPath.m */; };
+		74DF79F672FE89E15873EA85 /* Culprit.m in Sources */ = {isa = PBXBuildFile; fileRef = 28AAC4D2006054607F54EDFC /* Culprit.m */; };
+		7BE40757CB731D44086C7E41 /* JetsamCtor.c in Sources */ = {isa = PBXBuildFile; fileRef = 202529596164A6E45F80D931 /* JetsamCtor.c */; };
+		7D9A7202AE39AFAA8C736660 /* RuntimeCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D40E22466696BB717E35D8 /* RuntimeCall.m */; };
+		82D8F10141077AFFD2747F6D /* Cr4shedXPC.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B682E91C6A79018D95DC58 /* Cr4shedXPC.m */; };
+		83BE8626502F36868A81C7C6 /* RemoteMemory.m in Sources */ = {isa = PBXBuildFile; fileRef = DF67E2B0AFBED36C5E24BDFB /* RemoteMemory.m */; };
+		8722F6A335E82C36797A0E04 /* HookSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 770DA0AC0A0BD30D638E1603 /* HookSupport.m */; };
+		87D8AFCBBC882ED3E5A3548C /* RuntimeCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D40E22466696BB717E35D8 /* RuntimeCall.m */; };
+		89B50ECBC40B5AF692D657B7 /* RemoteMemory.m in Sources */ = {isa = PBXBuildFile; fileRef = DF67E2B0AFBED36C5E24BDFB /* RemoteMemory.m */; };
+		8C7067D5E8B6533A56FC3A9C /* LogListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D4A5CFD1F19C4AC5CDCE3 /* LogListView.swift */; };
+		8CA0F445275DAE768578AC16 /* JailbreakPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5B2908CAB44000BC262977 /* JailbreakPath.m */; };
+		8CEA42F11DDE4CF2F2871BC2 /* Mach-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 3130C4DE91BA2B3679073098 /* Mach-Bridging-Header.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9004187984F9CE7893116099 /* HookSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 770DA0AC0A0BD30D638E1603 /* HookSupport.m */; };
+		9A2604942A6A42FD69B907A7 /* AppIcon29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EC9357C5964DCA7D1D5DEF9D /* AppIcon29x29@2x.png */; };
+		9ABD0DA780024BB31C4038A2 /* Cr4shedException.m in Sources */ = {isa = PBXBuildFile; fileRef = A944D3DABBDA56A94094649F /* Cr4shedException.m */; };
+		9B62718FE39A887BD34A7A2A /* RuntimeCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D40E22466696BB717E35D8 /* RuntimeCall.m */; };
+		9F0E724C9A6B99E34F8A3CD2 /* MachStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CD635AD7922BE9E765DE58 /* MachStrings.swift */; };
+		A9C8B1099056B2815493CD8B /* CrashLogFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC52D2D77C6CFC9C2B443CF /* CrashLogFormat.m */; };
+		AF70E8D28E3913C9E4ADEFFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96DFCDBD06F499086894F1D0 /* Assets.xcassets */; };
+		B27671736FA43320FA5861F0 /* ProcessListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56A72D7721E74C5FCCCB19E /* ProcessListView.swift */; };
+		B3C6CF793B907244C910A447 /* RemoteMemory.m in Sources */ = {isa = PBXBuildFile; fileRef = DF67E2B0AFBED36C5E24BDFB /* RemoteMemory.m */; };
+		B5E87089B0C9F4D223CC7A10 /* JailbreakPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5B2908CAB44000BC262977 /* JailbreakPath.m */; };
+		B67CB69494EBA03A30BD6C9E /* CrashLogFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC52D2D77C6CFC9C2B443CF /* CrashLogFormat.m */; };
+		BA702356387FCD0A293228F0 /* Preferences.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFB463793F5EBFF2BE0B55D /* Preferences.m */; };
+		BE1C576D9CB85891770B77C5 /* AppIcon29x29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C06AABA9786BC839EE1F8A9F /* AppIcon29x29@3x.png */; };
+		BF8AA675A80EA771E4E1BAC8 /* LogInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD0DA5D5276C31B13C45582 /* LogInfoView.swift */; };
+		C0446649EDF57DB0B22A609B /* JailbreakPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5B2908CAB44000BC262977 /* JailbreakPath.m */; };
+		C2D6CFE236C00F0151B3CCC5 /* RemoteMemory.m in Sources */ = {isa = PBXBuildFile; fileRef = DF67E2B0AFBED36C5E24BDFB /* RemoteMemory.m */; };
+		C3EAFD906751999C07ADC961 /* Symbolication.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC1F9A6ADA57483B35594FB /* Symbolication.m */; };
+		C42FAF01887F1593F20B99BA /* Preferences.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFB463793F5EBFF2BE0B55D /* Preferences.m */; };
+		C51DAD40A0ED9E05381D09A6 /* AppIcon76x76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D401223EC25F94C33918EECB /* AppIcon76x76@2x.png */; };
+		C55590AFB1ED2DFD93790931 /* RuntimeCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D40E22466696BB717E35D8 /* RuntimeCall.m */; };
+		C8203053E1A86917F4C8CE62 /* FileShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF653115C30F29521A98E86 /* FileShare.swift */; };
+		CBCD663225BC933FC7CAF2FB /* AppIcon60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84137F04EDB4346D69CEA287 /* AppIcon60x60@2x.png */; };
+		CC848149B9DABAD0F79EB0BB /* BlacklistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3F82AAF59E78FEE606D649 /* BlacklistView.swift */; };
+		CD76BEF23066F39F7DF7FCD5 /* MachCtor.c in Sources */ = {isa = PBXBuildFile; fileRef = 0272C7DC51B0942952591D83 /* MachCtor.c */; };
+		CDA83AC89988E77C4A27108E /* CrashLogFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC52D2D77C6CFC9C2B443CF /* CrashLogFormat.m */; };
+		CE5DFCFAEFA1B636250FA2D5 /* Culprit.m in Sources */ = {isa = PBXBuildFile; fileRef = 28AAC4D2006054607F54EDFC /* Culprit.m */; };
+		CEE6414F5E3BA636A6230435 /* AppIcon76x76@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = F832B05E45A0880CFA2668B3 /* AppIcon76x76@1x.png */; };
+		D2F762FA70A1DB878284BD04 /* AppIcon40x40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D81154EB5337FE74C50FBD32 /* AppIcon40x40@3x.png */; };
+		D4BD0CD51E9DC651BC5F123D /* Cr4shedCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 505D79814F3117608C93E673 /* Cr4shedCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D506B5BFBF2242C1DAB75871 /* Cr4shedXPC.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B682E91C6A79018D95DC58 /* Cr4shedXPC.m */; };
+		D82F66E338C85CF7EDF96547 /* AppIcon40x40@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8377F2B658147C77EE73CB5F /* AppIcon40x40@1x.png */; };
+		D9AF40743E85BA6071BFC131 /* MachHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF56B18DDABD6D291253B1AC /* MachHooks.swift */; };
+		E3B0D1E709C70B11BD932F9A /* AppIcon20x20@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AA11712F70E3A639CD3499E /* AppIcon20x20@1x.png */; };
+		E51F229F4D58D669EF59E4E2 /* dyn.c in Sources */ = {isa = PBXBuildFile; fileRef = 2ECED7B080F146F8810008EF /* dyn.c */; };
+		EB9B76766F70E34904512BA4 /* Cr4shedXPC.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B682E91C6A79018D95DC58 /* Cr4shedXPC.m */; };
+		ED92C82CA25D15D1D9973291 /* Culprit.m in Sources */ = {isa = PBXBuildFile; fileRef = 28AAC4D2006054607F54EDFC /* Culprit.m */; };
+		F24C5CE3C8472741EF78B371 /* Symbolication.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC1F9A6ADA57483B35594FB /* Symbolication.m */; };
+		F7993BC534EDB8678ADC8DC9 /* CrashSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = C886E6E9B5895811C53BECF4 /* CrashSession.swift */; };
+		FD9C90DD8005F22ECBB4ACB3 /* LogViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DBE38FD68259357F525D49 /* LogViewer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0272C7DC51B0942952591D83 /* MachCtor.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = MachCtor.c; sourceTree = "<group>"; };
+		05DA41FF4A83271598F836D4 /* CrashLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrashLog.swift; sourceTree = "<group>"; };
+		09D40E22466696BB717E35D8 /* RuntimeCall.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeCall.m; sourceTree = "<group>"; };
+		0DEF19808B46A5D5D576FCC2 /* Cr4shedJetsam.dylib */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "compiled.mach-o.dylib"; path = Cr4shedJetsam.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EE81F2DD94BF73AD3EA81A3 /* Jetsam-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Jetsam-Bridging-Header.h"; sourceTree = "<group>"; };
+		1090C22F44170C84F279B294 /* ProcessStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessStore.swift; sourceTree = "<group>"; };
+		1511BFBA155D39827472E7B1 /* MachReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachReport.swift; sourceTree = "<group>"; };
+		18141EC3422B638F7257A3EC /* IvarAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IvarAccess.swift; sourceTree = "<group>"; };
+		1B3F82AAF59E78FEE606D649 /* BlacklistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlacklistView.swift; sourceTree = "<group>"; };
+		202529596164A6E45F80D931 /* JetsamCtor.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = JetsamCtor.c; sourceTree = "<group>"; };
+		28AAC4D2006054607F54EDFC /* Culprit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Culprit.m; sourceTree = "<group>"; };
+		2CF653115C30F29521A98E86 /* FileShare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileShare.swift; sourceTree = "<group>"; };
+		2DC1F9A6ADA57483B35594FB /* Symbolication.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Symbolication.m; sourceTree = "<group>"; };
+		2ECED7B080F146F8810008EF /* dyn.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = dyn.c; sourceTree = "<group>"; };
+		3130C4DE91BA2B3679073098 /* Mach-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mach-Bridging-Header.h"; sourceTree = "<group>"; };
+		315690CCC211EC05BA96F6EA /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		37F33E8ACAB65D95D923920B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		3FC52D2D77C6CFC9C2B443CF /* CrashLogFormat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CrashLogFormat.m; sourceTree = "<group>"; };
+		4B78BA563940086104134884 /* AppIcon83.5x83.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon83.5x83.5@2x.png"; sourceTree = "<group>"; };
+		505D79814F3117608C93E673 /* Cr4shedCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cr4shedCommon.h; sourceTree = "<group>"; };
+		5A13BB95CDFE019099266267 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5F4882CB95E691F33EAFA02C /* AppIcon29x29@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon29x29@1x.png"; sourceTree = "<group>"; };
+		63999FFFE6EBE00CA25FB2EF /* PrivateXPC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrivateXPC.h; sourceTree = "<group>"; };
+		770DA0AC0A0BD30D638E1603 /* HookSupport.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HookSupport.m; sourceTree = "<group>"; };
+		7AB99ED32E63238D4D52C18A /* FastTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastTextView.swift; sourceTree = "<group>"; };
+		7B5EE0D1B9E47FA100D8DF83 /* JetsamTweak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JetsamTweak.swift; sourceTree = "<group>"; };
+		7C15A49B31122BE9F9D010AA /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		8377F2B658147C77EE73CB5F /* AppIcon40x40@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon40x40@1x.png"; sourceTree = "<group>"; };
+		84137F04EDB4346D69CEA287 /* AppIcon60x60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon60x60@2x.png"; sourceTree = "<group>"; };
+		85CA039FB3E5E57E2C7A06B4 /* AppIcon20x20@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon20x20@2x.png"; sourceTree = "<group>"; };
+		8AA11712F70E3A639CD3499E /* AppIcon20x20@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon20x20@1x.png"; sourceTree = "<group>"; };
+		90A285B14D53834EFC394E27 /* Cr4shedApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cr4shedApp.swift; sourceTree = "<group>"; };
+		9243EE5B4125AB60605D53FE /* cr4shedd */ = {isa = PBXFileReference; includeInIndex = 0; path = cr4shedd; sourceTree = BUILT_PRODUCTS_DIR; };
+		937ABDAC965A12C4279C8D3B /* Daemon-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Daemon-Bridging-Header.h"; sourceTree = "<group>"; };
+		96DFCDBD06F499086894F1D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		99161CDDB78E75D3C2524AB3 /* AppIcon60x60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon60x60@3x.png"; sourceTree = "<group>"; };
+		9A5B2908CAB44000BC262977 /* JailbreakPath.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JailbreakPath.m; sourceTree = "<group>"; };
+		9C4D4A5CFD1F19C4AC5CDCE3 /* LogListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogListView.swift; sourceTree = "<group>"; };
+		9DD0DA5D5276C31B13C45582 /* LogInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInfoView.swift; sourceTree = "<group>"; };
+		A0B682E91C6A79018D95DC58 /* Cr4shedXPC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cr4shedXPC.m; sourceTree = "<group>"; };
+		A944D3DABBDA56A94094649F /* Cr4shedException.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cr4shedException.m; sourceTree = "<group>"; };
+		AD812B0599C704C1E842A414 /* AppIcon20x20@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon20x20@3x.png"; sourceTree = "<group>"; };
+		AF56B18DDABD6D291253B1AC /* MachHooks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachHooks.swift; sourceTree = "<group>"; };
+		AF9B38F0A25FE60D32FEE95E /* App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "App-Bridging-Header.h"; sourceTree = "<group>"; };
+		B2D305FE2C71810858954CED /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		BDFB463793F5EBFF2BE0B55D /* Preferences.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Preferences.m; sourceTree = "<group>"; };
+		C06AABA9786BC839EE1F8A9F /* AppIcon29x29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon29x29@3x.png"; sourceTree = "<group>"; };
+		C0DDA3CD93798711C6EF603D /* Cr4shedMach.dylib */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "compiled.mach-o.dylib"; path = Cr4shedMach.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		C15ECDDBE8B584113623846D /* Cr4shedException.dylib */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "compiled.mach-o.dylib"; path = Cr4shedException.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7072574E6DCFD35D4DC0406 /* Cr4shed.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Cr4shed.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C886E6E9B5895811C53BECF4 /* CrashSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrashSession.swift; sourceTree = "<group>"; };
+		D0CD635AD7922BE9E765DE58 /* MachStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachStrings.swift; sourceTree = "<group>"; };
+		D1093F6C92F6220CDA5DBAEE /* AppIcon40x40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon40x40@2x.png"; sourceTree = "<group>"; };
+		D401223EC25F94C33918EECB /* AppIcon76x76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon76x76@2x.png"; sourceTree = "<group>"; };
+		D56A72D7721E74C5FCCCB19E /* ProcessListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessListView.swift; sourceTree = "<group>"; };
+		D6FB8B35D459B065429B933B /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D81154EB5337FE74C50FBD32 /* AppIcon40x40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon40x40@3x.png"; sourceTree = "<group>"; };
+		DF67E2B0AFBED36C5E24BDFB /* RemoteMemory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RemoteMemory.m; sourceTree = "<group>"; };
+		E9DBE38FD68259357F525D49 /* LogViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogViewer.swift; sourceTree = "<group>"; };
+		EC9357C5964DCA7D1D5DEF9D /* AppIcon29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon29x29@2x.png"; sourceTree = "<group>"; };
+		F832B05E45A0880CFA2668B3 /* AppIcon76x76@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon76x76@1x.png"; sourceTree = "<group>"; };
+		F9DCC6000A42597EB517BA94 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		05E9F4CAAC3AB2959F5EFBB6 /* Mach */ = {
+			isa = PBXGroup;
+			children = (
+				C886E6E9B5895811C53BECF4 /* CrashSession.swift */,
+				18141EC3422B638F7257A3EC /* IvarAccess.swift */,
+				3130C4DE91BA2B3679073098 /* Mach-Bridging-Header.h */,
+				0272C7DC51B0942952591D83 /* MachCtor.c */,
+				AF56B18DDABD6D291253B1AC /* MachHooks.swift */,
+				1511BFBA155D39827472E7B1 /* MachReport.swift */,
+				D0CD635AD7922BE9E765DE58 /* MachStrings.swift */,
+			);
+			path = Mach;
+			sourceTree = "<group>";
+		};
+		1975F251778E37118FCCF805 /* Exception */ = {
+			isa = PBXGroup;
+			children = (
+				A944D3DABBDA56A94094649F /* Cr4shedException.m */,
+			);
+			path = Exception;
+			sourceTree = "<group>";
+		};
+		2B735E63A49528F7BD8497DC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1B3F82AAF59E78FEE606D649 /* BlacklistView.swift */,
+				7AB99ED32E63238D4D52C18A /* FastTextView.swift */,
+				2CF653115C30F29521A98E86 /* FileShare.swift */,
+				9DD0DA5D5276C31B13C45582 /* LogInfoView.swift */,
+				9C4D4A5CFD1F19C4AC5CDCE3 /* LogListView.swift */,
+				E9DBE38FD68259357F525D49 /* LogViewer.swift */,
+				D56A72D7721E74C5FCCCB19E /* ProcessListView.swift */,
+				7C15A49B31122BE9F9D010AA /* RootView.swift */,
+				37F33E8ACAB65D95D923920B /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3E0A075EBBD8EF922FB6D2A1 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				3E10307126C9248E8913B5CE /* App */,
+				8044C1929DBF29A7B9670002 /* CCommon */,
+				DB28ACC59405C0A3896CB64D /* Daemon */,
+				1975F251778E37118FCCF805 /* Exception */,
+				77A14A3FF63A08D2456166FB /* Jetsam */,
+				05E9F4CAAC3AB2959F5EFBB6 /* Mach */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		3E10307126C9248E8913B5CE /* App */ = {
+			isa = PBXGroup;
+			children = (
+				AF9B38F0A25FE60D32FEE95E /* App-Bridging-Header.h */,
+				90A285B14D53834EFC394E27 /* Cr4shedApp.swift */,
+				7E70551787D921210B8542EA /* Models */,
+				583DA385DB26CF483314D9E9 /* Resources */,
+				2B735E63A49528F7BD8497DC /* Views */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		4A178395537881F3C01AAFD5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C7072574E6DCFD35D4DC0406 /* Cr4shed.app */,
+				9243EE5B4125AB60605D53FE /* cr4shedd */,
+				C15ECDDBE8B584113623846D /* Cr4shedException.dylib */,
+				0DEF19808B46A5D5D576FCC2 /* Cr4shedJetsam.dylib */,
+				C0DDA3CD93798711C6EF603D /* Cr4shedMach.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4CE6A7DB25A0FE36F4E6581B = {
+			isa = PBXGroup;
+			children = (
+				3E0A075EBBD8EF922FB6D2A1 /* Sources */,
+				E1E8F22F88F18CF8E7AE6C1F /* Vendor */,
+				4A178395537881F3C01AAFD5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		583DA385DB26CF483314D9E9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8AA11712F70E3A639CD3499E /* AppIcon20x20@1x.png */,
+				85CA039FB3E5E57E2C7A06B4 /* AppIcon20x20@2x.png */,
+				AD812B0599C704C1E842A414 /* AppIcon20x20@3x.png */,
+				5F4882CB95E691F33EAFA02C /* AppIcon29x29@1x.png */,
+				EC9357C5964DCA7D1D5DEF9D /* AppIcon29x29@2x.png */,
+				C06AABA9786BC839EE1F8A9F /* AppIcon29x29@3x.png */,
+				8377F2B658147C77EE73CB5F /* AppIcon40x40@1x.png */,
+				D1093F6C92F6220CDA5DBAEE /* AppIcon40x40@2x.png */,
+				D81154EB5337FE74C50FBD32 /* AppIcon40x40@3x.png */,
+				84137F04EDB4346D69CEA287 /* AppIcon60x60@2x.png */,
+				99161CDDB78E75D3C2524AB3 /* AppIcon60x60@3x.png */,
+				F832B05E45A0880CFA2668B3 /* AppIcon76x76@1x.png */,
+				D401223EC25F94C33918EECB /* AppIcon76x76@2x.png */,
+				4B78BA563940086104134884 /* AppIcon83.5x83.5@2x.png */,
+				96DFCDBD06F499086894F1D0 /* Assets.xcassets */,
+				F14EDF7C45C69E3B6F7CA36C /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		77A14A3FF63A08D2456166FB /* Jetsam */ = {
+			isa = PBXGroup;
+			children = (
+				0EE81F2DD94BF73AD3EA81A3 /* Jetsam-Bridging-Header.h */,
+				202529596164A6E45F80D931 /* JetsamCtor.c */,
+				7B5EE0D1B9E47FA100D8DF83 /* JetsamTweak.swift */,
+			);
+			path = Jetsam;
+			sourceTree = "<group>";
+		};
+		7E70551787D921210B8542EA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				05DA41FF4A83271598F836D4 /* CrashLog.swift */,
+				1090C22F44170C84F279B294 /* ProcessStore.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8044C1929DBF29A7B9670002 /* CCommon */ = {
+			isa = PBXGroup;
+			children = (
+				505D79814F3117608C93E673 /* Cr4shedCommon.h */,
+				A0B682E91C6A79018D95DC58 /* Cr4shedXPC.m */,
+				3FC52D2D77C6CFC9C2B443CF /* CrashLogFormat.m */,
+				28AAC4D2006054607F54EDFC /* Culprit.m */,
+				770DA0AC0A0BD30D638E1603 /* HookSupport.m */,
+				9A5B2908CAB44000BC262977 /* JailbreakPath.m */,
+				BDFB463793F5EBFF2BE0B55D /* Preferences.m */,
+				63999FFFE6EBE00CA25FB2EF /* PrivateXPC.h */,
+				DF67E2B0AFBED36C5E24BDFB /* RemoteMemory.m */,
+				09D40E22466696BB717E35D8 /* RuntimeCall.m */,
+				2DC1F9A6ADA57483B35594FB /* Symbolication.m */,
+			);
+			path = CCommon;
+			sourceTree = "<group>";
+		};
+		AC0B7C6319A7D5D618CBC161 /* libroot */ = {
+			isa = PBXGroup;
+			children = (
+				ED5D86B1C41B939E695BFB57 /* src */,
+			);
+			path = libroot;
+			sourceTree = "<group>";
+		};
+		DB28ACC59405C0A3896CB64D /* Daemon */ = {
+			isa = PBXGroup;
+			children = (
+				937ABDAC965A12C4279C8D3B /* Daemon-Bridging-Header.h */,
+				315690CCC211EC05BA96F6EA /* main.swift */,
+			);
+			path = Daemon;
+			sourceTree = "<group>";
+		};
+		E1E8F22F88F18CF8E7AE6C1F /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				AC0B7C6319A7D5D618CBC161 /* libroot */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		ED5D86B1C41B939E695BFB57 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				2ECED7B080F146F8810008EF /* dyn.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2E45919E333596C7491A86D6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DC6BF5C5AF30AA5C05356EF /* Cr4shedCommon.h in Headers */,
+				3FDB67894F9B8E50FDC2142D /* Jetsam-Bridging-Header.h in Headers */,
+				2DA9E93D9C6EEF6A7232156F /* PrivateXPC.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		775EF4C766A382CE945BB613 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4BD0CD51E9DC651BC5F123D /* Cr4shedCommon.h in Headers */,
+				8CEA42F11DDE4CF2F2871BC2 /* Mach-Bridging-Header.h in Headers */,
+				33D43B5BEF06F0F59FF935AE /* PrivateXPC.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE47B08789A357F1DFAE2C18 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				515610E521C54D15F87DAFD0 /* Cr4shedCommon.h in Headers */,
+				0EFC86CECB203C018689D911 /* PrivateXPC.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2ED1888AB3F3CD084053FE50 /* Cr4shed */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F0F79BC994AB1505CD0343F /* Build configuration list for PBXNativeTarget "Cr4shed" */;
+			buildPhases = (
+				36060AB5B0DE171DCF8F08C1 /* Sources */,
+				1E155FBE1E384099E9955467 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Cr4shed;
+			packageProductDependencies = (
+			);
+			productName = Cr4shed;
+			productReference = C7072574E6DCFD35D4DC0406 /* Cr4shed.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8EE2E1C86A54F9B498629769 /* cr4shedd */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 191FA8101578F7FC71D2DA05 /* Build configuration list for PBXNativeTarget "cr4shedd" */;
+			buildPhases = (
+				3674CA7B00E472E40AA14D44 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = cr4shedd;
+			packageProductDependencies = (
+			);
+			productName = cr4shedd;
+			productReference = 9243EE5B4125AB60605D53FE /* cr4shedd */;
+			productType = "com.apple.product-type.tool";
+		};
+		9451431D180534CF1E9167DA /* Cr4shedMach */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6A93B2FC8A8908E84340522F /* Build configuration list for PBXNativeTarget "Cr4shedMach" */;
+			buildPhases = (
+				775EF4C766A382CE945BB613 /* Headers */,
+				509B7574353EB80F7BDD847D /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Cr4shedMach;
+			packageProductDependencies = (
+			);
+			productName = Cr4shedMach;
+			productReference = C0DDA3CD93798711C6EF603D /* Cr4shedMach.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		DEE4C7AD5308C54260D9AB7D /* Cr4shedJetsam */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 125C9028DD7DBE3B7AC70C2B /* Build configuration list for PBXNativeTarget "Cr4shedJetsam" */;
+			buildPhases = (
+				2E45919E333596C7491A86D6 /* Headers */,
+				559A67756AF67A66437959D1 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Cr4shedJetsam;
+			packageProductDependencies = (
+			);
+			productName = Cr4shedJetsam;
+			productReference = 0DEF19808B46A5D5D576FCC2 /* Cr4shedJetsam.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		FADDE50B42B4081E2A4A43F4 /* Cr4shedException */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF9191D709B98E0976A3A85D /* Build configuration list for PBXNativeTarget "Cr4shedException" */;
+			buildPhases = (
+				FE47B08789A357F1DFAE2C18 /* Headers */,
+				4E942CEFDF0FAAC8A3603324 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Cr4shedException;
+			packageProductDependencies = (
+			);
+			productName = Cr4shedException;
+			productReference = C15ECDDBE8B584113623846D /* Cr4shedException.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		61C2EA313EEBFF1D7320060B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+				};
+			};
+			buildConfigurationList = BDF02321D602B9FDF6DEF0B1 /* Build configuration list for PBXProject "Cr4shed" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+				ja,
+				"zh-Hans",
+				"zh-Hant",
+			);
+			mainGroup = 4CE6A7DB25A0FE36F4E6581B;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 4A178395537881F3C01AAFD5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FADDE50B42B4081E2A4A43F4 /* Cr4shedException */,
+				9451431D180534CF1E9167DA /* Cr4shedMach */,
+				DEE4C7AD5308C54260D9AB7D /* Cr4shedJetsam */,
+				8EE2E1C86A54F9B498629769 /* cr4shedd */,
+				2ED1888AB3F3CD084053FE50 /* Cr4shed */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1E155FBE1E384099E9955467 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3B0D1E709C70B11BD932F9A /* AppIcon20x20@1x.png in Resources */,
+				2BE054C44F5A7C59F6A2BA16 /* AppIcon20x20@2x.png in Resources */,
+				681F4B69EFE478669D1FE515 /* AppIcon20x20@3x.png in Resources */,
+				12510E290EE8DCF094188C53 /* AppIcon29x29@1x.png in Resources */,
+				9A2604942A6A42FD69B907A7 /* AppIcon29x29@2x.png in Resources */,
+				BE1C576D9CB85891770B77C5 /* AppIcon29x29@3x.png in Resources */,
+				D82F66E338C85CF7EDF96547 /* AppIcon40x40@1x.png in Resources */,
+				64B4D643E468D3C63B4AAE03 /* AppIcon40x40@2x.png in Resources */,
+				D2F762FA70A1DB878284BD04 /* AppIcon40x40@3x.png in Resources */,
+				CBCD663225BC933FC7CAF2FB /* AppIcon60x60@2x.png in Resources */,
+				00873D1FB72FA7E3C147A3B0 /* AppIcon60x60@3x.png in Resources */,
+				CEE6414F5E3BA636A6230435 /* AppIcon76x76@1x.png in Resources */,
+				C51DAD40A0ED9E05381D09A6 /* AppIcon76x76@2x.png in Resources */,
+				3DEA9868AD636E960D0D0F67 /* AppIcon83.5x83.5@2x.png in Resources */,
+				AF70E8D28E3913C9E4ADEFFA /* Assets.xcassets in Resources */,
+				2C0C2F2079A8EBC7DC17C212 /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		36060AB5B0DE171DCF8F08C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC848149B9DABAD0F79EB0BB /* BlacklistView.swift in Sources */,
+				69A0F2B8C76ABAC4687A8645 /* Cr4shedApp.swift in Sources */,
+				42E9FB39C0C7D6CD96733BFB /* Cr4shedXPC.m in Sources */,
+				265C88FA5BC87E6D3364E4F6 /* CrashLog.swift in Sources */,
+				A9C8B1099056B2815493CD8B /* CrashLogFormat.m in Sources */,
+				74DF79F672FE89E15873EA85 /* Culprit.m in Sources */,
+				38C41B8EE975E0BECEF3D275 /* FastTextView.swift in Sources */,
+				C8203053E1A86917F4C8CE62 /* FileShare.swift in Sources */,
+				8722F6A335E82C36797A0E04 /* HookSupport.m in Sources */,
+				C0446649EDF57DB0B22A609B /* JailbreakPath.m in Sources */,
+				BF8AA675A80EA771E4E1BAC8 /* LogInfoView.swift in Sources */,
+				8C7067D5E8B6533A56FC3A9C /* LogListView.swift in Sources */,
+				FD9C90DD8005F22ECBB4ACB3 /* LogViewer.swift in Sources */,
+				C42FAF01887F1593F20B99BA /* Preferences.m in Sources */,
+				B27671736FA43320FA5861F0 /* ProcessListView.swift in Sources */,
+				6111084D3153D11896AE2A72 /* ProcessStore.swift in Sources */,
+				83BE8626502F36868A81C7C6 /* RemoteMemory.m in Sources */,
+				2C216104105352671FC1E59D /* RootView.swift in Sources */,
+				C55590AFB1ED2DFD93790931 /* RuntimeCall.m in Sources */,
+				3E68E80D3A9B831532BCA0CE /* SettingsView.swift in Sources */,
+				55EE3319C69FBAABB911E45E /* Symbolication.m in Sources */,
+				E51F229F4D58D669EF59E4E2 /* dyn.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3674CA7B00E472E40AA14D44 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15225C809ABDA5A209064F33 /* Cr4shedXPC.m in Sources */,
+				CDA83AC89988E77C4A27108E /* CrashLogFormat.m in Sources */,
+				ED92C82CA25D15D1D9973291 /* Culprit.m in Sources */,
+				9004187984F9CE7893116099 /* HookSupport.m in Sources */,
+				B5E87089B0C9F4D223CC7A10 /* JailbreakPath.m in Sources */,
+				432E7BA8CD24CE9893CDBB0D /* Preferences.m in Sources */,
+				89B50ECBC40B5AF692D657B7 /* RemoteMemory.m in Sources */,
+				3811B58D49049B18398D330F /* RuntimeCall.m in Sources */,
+				F24C5CE3C8472741EF78B371 /* Symbolication.m in Sources */,
+				2E89724238F49FC1EA70CD2D /* dyn.c in Sources */,
+				3E6AC8639370A521A2E6E943 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E942CEFDF0FAAC8A3603324 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9ABD0DA780024BB31C4038A2 /* Cr4shedException.m in Sources */,
+				EB9B76766F70E34904512BA4 /* Cr4shedXPC.m in Sources */,
+				57BFCF3B72FCB5E29C505CF0 /* CrashLogFormat.m in Sources */,
+				CE5DFCFAEFA1B636250FA2D5 /* Culprit.m in Sources */,
+				15F9CBB46BC7DA4606C084E0 /* HookSupport.m in Sources */,
+				7370938919BC27F1C8297B47 /* JailbreakPath.m in Sources */,
+				22B9A2BC485D3FCBE1711BA7 /* Preferences.m in Sources */,
+				B3C6CF793B907244C910A447 /* RemoteMemory.m in Sources */,
+				9B62718FE39A887BD34A7A2A /* RuntimeCall.m in Sources */,
+				09925C6454D72B3A0CA61985 /* Symbolication.m in Sources */,
+				6EA2BA338E6346E64296080E /* dyn.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		509B7574353EB80F7BDD847D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82D8F10141077AFFD2747F6D /* Cr4shedXPC.m in Sources */,
+				312046C3F5B552FA510297BC /* CrashLogFormat.m in Sources */,
+				F7993BC534EDB8678ADC8DC9 /* CrashSession.swift in Sources */,
+				4F4A278CEA0994BF5BDEF74B /* Culprit.m in Sources */,
+				0EB1C010382C158993CEEC3A /* HookSupport.m in Sources */,
+				4EE401FF04C0F178059C4A41 /* IvarAccess.swift in Sources */,
+				6CD78308AA123D3BCA27F486 /* JailbreakPath.m in Sources */,
+				CD76BEF23066F39F7DF7FCD5 /* MachCtor.c in Sources */,
+				D9AF40743E85BA6071BFC131 /* MachHooks.swift in Sources */,
+				144E9EA1CD2227518A8E4BC4 /* MachReport.swift in Sources */,
+				9F0E724C9A6B99E34F8A3CD2 /* MachStrings.swift in Sources */,
+				441AF321D153A53E04043A55 /* Preferences.m in Sources */,
+				C2D6CFE236C00F0151B3CCC5 /* RemoteMemory.m in Sources */,
+				87D8AFCBBC882ED3E5A3548C /* RuntimeCall.m in Sources */,
+				1A8389893AD53D7440256900 /* Symbolication.m in Sources */,
+				17F002FA184D9D42F4703347 /* dyn.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		559A67756AF67A66437959D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D506B5BFBF2242C1DAB75871 /* Cr4shedXPC.m in Sources */,
+				B67CB69494EBA03A30BD6C9E /* CrashLogFormat.m in Sources */,
+				255C97161D3BA0EE3068D5CA /* Culprit.m in Sources */,
+				00C558C36A2E5E1474542B5F /* HookSupport.m in Sources */,
+				8CA0F445275DAE768578AC16 /* JailbreakPath.m in Sources */,
+				7BE40757CB731D44086C7E41 /* JetsamCtor.c in Sources */,
+				69A2E733AB2C6C8822F54A9D /* JetsamTweak.swift in Sources */,
+				BA702356387FCD0A293228F0 /* Preferences.m in Sources */,
+				083C8AA1906B50BDEE11CB8E /* RemoteMemory.m in Sources */,
+				7D9A7202AE39AFAA8C736660 /* RuntimeCall.m in Sources */,
+				C3EAFD906751999C07ADC961 /* Symbolication.m in Sources */,
+				2AEF2D5989DDA97421AEB8CC /* dyn.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F14EDF7C45C69E3B6F7CA36C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A13BB95CDFE019099266267 /* en */,
+				D6FB8B35D459B065429B933B /* ja */,
+				F9DCC6000A42597EB517BA94 /* zh-Hans */,
+				B2D305FE2C71810858954CED /* zh-Hant */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		04010DD2CA7325DD3F5A9956 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_EXTENSION = dylib;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MACH_O_TYPE = mh_dylib;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					CoreSymbolication,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.muirey03.Cr4shedException;
+				PRODUCT_NAME = Cr4shedException;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		17BAF69C3933BB2A25F37CB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					UserNotifications,
+					"-framework",
+					CoreSymbolication,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.muirey03.cr4shedd;
+				PRODUCT_NAME = cr4shedd;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Sources/Daemon/Daemon-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5268FC69173F722356DA8EF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Sources/App/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+					"-framework",
+					CoreSymbolication,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.muirey03.cr4shedgui;
+				PRODUCT_NAME = Cr4shed;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Sources/App/App-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		68CC483C0B6C76CDC60336F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "arm64 arm64e";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/Frameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/Sources/CCommon",
+					"$(SRCROOT)/Vendor/libroot/src",
+					"$(SRCROOT)/Include",
+					"$(SRCROOT)/Include/CoreSymbolication",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)/Libraries",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "$(inherited) -DIPHONEOS_ARM64 -Wno-unguarded-availability";
+				OTHER_SWIFT_FLAGS = "$(inherited) -Osize";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 arm64e";
+			};
+			name = Release;
+		};
+		88111265963050E5EEEB2CD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Sources/App/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+					"-framework",
+					CoreSymbolication,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.muirey03.cr4shedgui;
+				PRODUCT_NAME = Cr4shed;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Sources/App/App-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		926CF5280F60950C012F1D69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_EXTENSION = dylib;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MACH_O_TYPE = mh_dylib;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					CoreSymbolication,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.muirey03.Cr4shedJetsam;
+				PRODUCT_NAME = Cr4shedJetsam;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Sources/Jetsam/Jetsam-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Osize";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		94D2B6DF6C2A9DF287E15A4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_EXTENSION = dylib;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MACH_O_TYPE = mh_dylib;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					CoreSymbolication,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.muirey03.Cr4shedJetsam;
+				PRODUCT_NAME = Cr4shedJetsam;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Sources/Jetsam/Jetsam-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Osize";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C6F2C583B3B26C7468D1ED22 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_EXTENSION = dylib;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MACH_O_TYPE = mh_dylib;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					CoreSymbolication,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.muirey03.Cr4shedMach;
+				PRODUCT_NAME = Cr4shedMach;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Sources/Mach/Mach-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Osize";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E1736C5ECC2BF2F28D73AAC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_EXTENSION = dylib;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MACH_O_TYPE = mh_dylib;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					CoreSymbolication,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.muirey03.Cr4shedException;
+				PRODUCT_NAME = Cr4shedException;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EFDBF61F3813F2E5D54EC1BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "arm64 arm64e";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/Frameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/Sources/CCommon",
+					"$(SRCROOT)/Vendor/libroot/src",
+					"$(SRCROOT)/Include",
+					"$(SRCROOT)/Include/CoreSymbolication",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)/Libraries",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "$(inherited) -DIPHONEOS_ARM64 -Wno-unguarded-availability";
+				OTHER_SWIFT_FLAGS = "$(inherited) -Osize";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 arm64e";
+			};
+			name = Debug;
+		};
+		F1310DA0046E82F838150F7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_EXTENSION = dylib;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MACH_O_TYPE = mh_dylib;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					CoreSymbolication,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.muirey03.Cr4shedMach;
+				PRODUCT_NAME = Cr4shedMach;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Sources/Mach/Mach-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Osize";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F70657F79CD2D9EA2328EF5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					UserNotifications,
+					"-framework",
+					CoreSymbolication,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.muirey03.cr4shedd;
+				PRODUCT_NAME = cr4shedd;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Sources/Daemon/Daemon-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0F0F79BC994AB1505CD0343F /* Build configuration list for PBXNativeTarget "Cr4shed" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5268FC69173F722356DA8EF3 /* Debug */,
+				88111265963050E5EEEB2CD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		125C9028DD7DBE3B7AC70C2B /* Build configuration list for PBXNativeTarget "Cr4shedJetsam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				926CF5280F60950C012F1D69 /* Debug */,
+				94D2B6DF6C2A9DF287E15A4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		191FA8101578F7FC71D2DA05 /* Build configuration list for PBXNativeTarget "cr4shedd" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F70657F79CD2D9EA2328EF5E /* Debug */,
+				17BAF69C3933BB2A25F37CB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		6A93B2FC8A8908E84340522F /* Build configuration list for PBXNativeTarget "Cr4shedMach" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6F2C583B3B26C7468D1ED22 /* Debug */,
+				F1310DA0046E82F838150F7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		AF9191D709B98E0976A3A85D /* Build configuration list for PBXNativeTarget "Cr4shedException" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1736C5ECC2BF2F28D73AAC1 /* Debug */,
+				04010DD2CA7325DD3F5A9956 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		BDF02321D602B9FDF6DEF0B1 /* Build configuration list for PBXProject "Cr4shed" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFDBF61F3813F2E5D54EC1BC /* Debug */,
+				68CC483C0B6C76CDC60336F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 61C2EA313EEBFF1D7320060B /* Project object */;
+}

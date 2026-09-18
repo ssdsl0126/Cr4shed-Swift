@@ -1,0 +1,35 @@
+/* 標籤欄 */
+"Reports" = "報告";
+"Settings" = "設定";
+
+/* 進程列表 */
+"Cr4shed" = "Cr4shed";
+"Clear" = "清空";
+"Delete" = "刪除";
+"Blacklist" = "加入黑名單";
+"Un-blacklist" = "移出黑名單";
+
+/* 日誌詳情 */
+"Crash Date" = "崩潰時間";
+"Culprit" = "罪魁禍首";
+"Reason" = "崩潰原因";
+"View Log" = "查看詳細日誌";
+"Unknown" = "未知";
+"N/A" = "無";
+"Export Failed" = "導出失敗";
+"Log file does not exist." = "日誌檔案不存在。";
+"OK" = "好";
+
+/* 設定頁面 */
+"General" = "一般";
+"Process sorting method" = "進程排序方式";
+"Date" = "按日期";
+"Name" = "按名稱";
+"Process blacklist" = "進程黑名單";
+"Log Jetsam Events" = "記錄 Jetsam (記憶體溢出) 事件";
+"Credits" = "鳴謝與支援";
+"Follow @Muirey03 on Twitter" = "關注原作者 @Muirey03 (Twitter)";
+"Donate to help development" = "捐贈支援原作者 (PayPal)";
+
+/* 黑名單頁面 */
+"Process name (Case-sensitive)" = "進程名稱 (區分大小寫)";

@@ -1,0 +1,75 @@
+{
+  "buildCommand" : {
+    "command" : "build",
+    "skipDependencies" : false,
+    "style" : "buildOnly"
+  },
+  "configuredTargets" : [
+    {
+      "guid" : "54f8f7973e9e79f3ceac911292b36502388225ca9efe0c494d5c7ca17a7871b2"
+    }
+  ],
+  "containerPath" : "/Users/ssdsl/Desktop/Cr4shed-Swift/Cr4shed.xcodeproj",
+  "continueBuildingAfterErrors" : false,
+  "dependencyScope" : "workspace",
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "build",
+    "activeArchitecture" : "undefined_arch",
+    "activeRunDestination" : {
+      "disableOnlyActiveArch" : true,
+      "hostTargetedPlatform" : null,
+      "platform" : "iphoneos",
+      "sdk" : "iphoneos27.0",
+      "sdkVariant" : "iphoneos",
+      "supportedArchitectures" : [
+        "armv4t",
+        "armv5",
+        "armv6",
+        "armv7",
+        "armv7f",
+        "armv7s",
+        "armv7k",
+        "arm64",
+        "arm64e"
+      ],
+      "targetArchitecture" : "undefined_arch"
+    },
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "/Users/ssdsl/Desktop/Cr4shed-Swift/build/DerivedData/Build/Intermediates.noindex",
+      "buildProductsPath" : "/Users/ssdsl/Desktop/Cr4shed-Swift/build/DerivedData/Build/Products",
+      "derivedDataPath" : "/Users/ssdsl/Desktop/Cr4shed-Swift/build/DerivedData",
+      "indexDataStoreFolderPath" : "/Users/ssdsl/Desktop/Cr4shed-Swift/build/DerivedData/Index.noindex/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/ssdsl/Desktop/Cr4shed-Swift/build/DerivedData/Index.noindex/PrecompiledHeaders",
+      "pchPath" : "/Users/ssdsl/Desktop/Cr4shed-Swift/build/DerivedData/Build/Intermediates.noindex/PrecompiledHeaders"
+    },
+    "configurationName" : "Release",
+    "overrides" : {
+      "commandLine" : {
+        "table" : {
+          "ARCHS" : "arm64 arm64e",
+          "BUILD_DIR" : "/Users/ssdsl/Desktop/Cr4shed-Swift/build",
+          "CODE_SIGNING_ALLOWED" : "NO",
+          "CODE_SIGNING_REQUIRED" : "NO",
+          "ONLY_ACTIVE_ARCH" : "NO",
+          "SDKROOT" : "iphoneos27.0"
+        }
+      },
+      "synthesized" : {
+        "table" : {
+          "ACTION" : "build",
+          "ENABLE_PREVIEWS" : "NO",
+          "ENABLE_XOJIT_PREVIEWS" : "YES"
+        }
+      }
+    }
+  },
+  "schemeCommand" : "launch",
+  "showNonLoggedProgress" : true,
+  "useDryRun" : false,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}

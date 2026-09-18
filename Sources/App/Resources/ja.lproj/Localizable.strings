@@ -1,0 +1,35 @@
+/* タブバー */
+"Reports" = "レポート";
+"Settings" = "設定";
+
+/* プロセス一覧 */
+"Cr4shed" = "Cr4shed";
+"Clear" = "すべて消去";
+"Delete" = "削除";
+"Blacklist" = "ブラックリストに追加";
+"Un-blacklist" = "ブラックリストから解除";
+
+/* ログ詳細 */
+"Crash Date" = "クラッシュ日時";
+"Culprit" = "原因となったファイル";
+"Reason" = "クラッシュの理由";
+"View Log" = "詳細ログを表示";
+"Unknown" = "不明";
+"N/A" = "なし";
+"Export Failed" = "エクスポート失敗";
+"Log file does not exist." = "ログファイルが存在しません。";
+"OK" = "OK";
+
+/* 設定画面 */
+"General" = "一般";
+"Process sorting method" = "プロセスの並び順";
+"Date" = "日付順";
+"Name" = "名前順";
+"Process blacklist" = "プロセスのブラックリスト";
+"Log Jetsam Events" = "Jetsam（メモリ不足）を記録";
+"Credits" = "クレジット";
+"Follow @Muirey03 on Twitter" = "作者 @Muirey03 をフォロー (Twitter)";
+"Donate to help development" = "開発を支援する (PayPal)";
+
+/* ブラックリスト */
+"Process name (Case-sensitive)" = "プロセス名（大文字小文字を区別）";
