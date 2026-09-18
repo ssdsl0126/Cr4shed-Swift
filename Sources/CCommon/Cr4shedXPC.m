@@ -1,3 +1,4 @@
+#include <sys/stat.h>
 #import "Cr4shedCommon.h"
 #include <xpc/xpc.h>
 #include <string.h>
@@ -117,9 +118,6 @@ bool CR4ShouldLogJetsam(void) {
 
 NSString *CR4StringFromTime(time_t t, CR4DateFormat type) {
     if (!t) t = time(NULL);
-    NSDictionary *reply = CR4XPCSend(CR4XPCStringFromTime, @{@"time": @(t), @"type": @(type)});
-    NSString *str = reply[@"ret"];
-    if (str.length) return str;
     return CR4StringFromDate([NSDate dateWithTimeIntervalSince1970:t], type);
 }
 
@@ -150,7 +148,8 @@ void CR4RunXPCListener(void * (^handler)(void *message)) {
 NSString *CR4LocalWriteLog(NSString *contents, NSString *rawName) {
     if (!contents.length || !rawName.length) return nil;
     NSString *filename = [rawName lastPathComponent];
-    NSString *full = [filename stringByAppendingPathExtension:@"log"];
+    NSString *stem = [filename.pathExtension isEqualToString:@"log"] ? [filename stringByDeletingPathExtension] : filename;
+    NSString *full = [stem stringByAppendingPathExtension:@"log"];
     if ([full pathComponents].count > 1) return nil;
     NSString *dir = CR4LogDirectory();
     NSFileManager *fm = [NSFileManager defaultManager];
@@ -167,7 +166,6 @@ NSString *CR4LocalWriteLog(NSString *contents, NSString *rawName) {
     }
     NSString *path = [dir stringByAppendingPathComponent:full];
     for (unsigned long long i = 1; [fm fileExistsAtPath:path]; i++) {
-        NSString *stem = [filename stringByDeletingPathExtension];
         path = [dir stringByAppendingPathComponent:[NSString stringWithFormat:@"%@ (%llu).log", stem, i]];
     }
     NSDictionary *attrs = @{
@@ -177,6 +175,10 @@ NSString *CR4LocalWriteLog(NSString *contents, NSString *rawName) {
     };
     NSData *data = [contents dataUsingEncoding:NSUTF8StringEncoding];
     if ([fm createFileAtPath:path contents:data attributes:attrs]) {
+        return path;
+    }
+    if ([data writeToFile:path atomically:YES]) {
+        chmod([path fileSystemRepresentation], 0666);
         return path;
     }
     return nil;

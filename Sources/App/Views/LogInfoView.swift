@@ -21,13 +21,21 @@ struct LogInfoView: View {
                         Text((CR4StringFromDate(log.date, .pretty) as String?) ?? String(localized: "N/A"))
                             .foregroundColor(.secondary)
                     }
+                    if let excType = exceptionTypeText, !excType.isEmpty {
+                        HStack {
+                            Text("Exception")
+                            Spacer()
+                            Text(excType)
+                                .foregroundColor(.secondary)
+                        }
+                    }
                     HStack {
                         Text("Culprit")
                         Spacer()
                         Text(culpritText)
                             .foregroundColor(.secondary)
                     }
-                    if let reason = log.info["NSExceptionReason"] as? String, !reason.isEmpty {
+                    if let reason = reasonText, !reason.isEmpty {
                         VStack(alignment: .leading, spacing: 6) {
                             Text("Reason")
                             Text(reason).font(.footnote).foregroundColor(.secondary)
@@ -59,10 +67,10 @@ struct LogInfoView: View {
                 }
             }
         }
-        .alert("Export Failed", isPresented: $shareError) {
-            Button("OK", role: .cancel) {}
+        .alert(String(localized: "Export Failed"), isPresented: $shareError) {
+            Button(String(localized: "OK"), role: .cancel) {}
         } message: {
-            Text("Log file does not exist.")
+            Text(String(localized: "Log file does not exist."))
         }
     }
 
@@ -74,6 +82,38 @@ struct LogInfoView: View {
         return raw
     }
 
+    private var exceptionTypeText: String? {
+        if let t = log.info["ExceptionType"] as? String, !t.isEmpty { return t }
+        for line in log.contents.components(separatedBy: "\n") {
+            if line.hasPrefix("Exception type: ") {
+                let t = String(line.dropFirst("Exception type: ".count)).trimmingCharacters(in: .whitespacesAndNewlines)
+                if !t.isEmpty { return t }
+            }
+        }
+        return nil
+    }
+
+    private var reasonText: String? {
+        if let r = log.info["NSExceptionReason"] as? String, !r.isEmpty { return r }
+        if let r = log.info["CrashReason"] as? String, !r.isEmpty { return r }
+        if let r = log.info["Reason"] as? String, !r.isEmpty { return r }
+        for line in log.contents.components(separatedBy: "\n") {
+            if line.hasPrefix("Reason: ") {
+                let r = String(line.dropFirst("Reason: ".count)).trimmingCharacters(in: .whitespacesAndNewlines)
+                if !r.isEmpty { return r }
+            }
+            if line.hasPrefix("Swift Error Message: ") {
+                let r = String(line.dropFirst("Swift Error Message: ".count)).trimmingCharacters(in: .whitespacesAndNewlines)
+                if !r.isEmpty { return r }
+            }
+            if line.hasPrefix("Exception subtype: ") {
+                let r = String(line.dropFirst("Exception subtype: ".count)).trimmingCharacters(in: .whitespacesAndNewlines)
+                if !r.isEmpty { return r }
+            }
+        }
+        return nil
+    }
+
     private func share() {
         guard FileManager.default.fileExists(atPath: log.path) else {
             shareError = true
@@ -82,3 +122,4 @@ struct LogInfoView: View {
         FileShare.present(url: URL(fileURLWithPath: log.path))
     }
 }
+

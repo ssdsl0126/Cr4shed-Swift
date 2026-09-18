@@ -63,7 +63,8 @@ targets:
       EXECUTABLE_EXTENSION: dylib
       GENERATE_INFOPLIST_FILE: YES
       SKIP_INSTALL: YES
-      GCC_OPTIMIZATION_LEVEL: s
+      SWIFT_OBJC_BRIDGING_HEADER: Sources/Mach/Mach-Bridging-Header.h
+      SWIFT_OPTIMIZATION_LEVEL: "-Osize"
       OTHER_LDFLAGS: ["-framework", "Foundation", "-framework", "CoreSymbolication"]
 
   Cr4shedJetsam:
