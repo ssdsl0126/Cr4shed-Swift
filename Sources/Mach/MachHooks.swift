@@ -100,28 +100,10 @@ private func install(on cls: AnyClass, includeLegacyExtras: Bool) {
 public func cr4shed_mach_init() {
     autoreleasepool {
         NSLog("[Cr4shedMach] Initializing in process: %@", ProcessInfo.processInfo.processName)
-        var targetClass: AnyClass? = nil
-        
-        let numClasses = objc_getClassList(nil, 0)
-        if numClasses > 0 {
-            let classes = UnsafeMutablePointer<AnyClass?>.allocate(capacity: Int(numClasses))
-            defer { classes.deallocate() }
-            let count = objc_getClassList(AutoreleasingUnsafeMutablePointer(classes), numClasses)
-            for i in 0..<Int(count) {
-                guard let cls = classes[i] else { continue }
-                if strcmp(class_getName(cls), "CrashReport") == 0 {
-                    let bundle = Bundle(for: cls)
-                    if bundle.bundleIdentifier == "com.apple.CrashReporter" {
-                        targetClass = cls
-                        break
-                    }
-                }
-            }
-        }
-        
-        if targetClass == nil {
-            targetClass = NSClassFromString("OSACrashReport") ?? NSClassFromString("CrashReport") ?? NSClassFromString("LegacyCrashReport")
-        }
+        // 优先秒级直取 OSACrashReport，无需扫描全运行时几万个类，彻底根除启动 CPU 峰值
+        let targetClass: AnyClass? = NSClassFromString("OSACrashReport")
+            ?? NSClassFromString("CrashReport")
+            ?? NSClassFromString("LegacyCrashReport")
         
         guard let cls = targetClass else {
             NSLog("[Cr4shedMach] Target CrashReport class not found")

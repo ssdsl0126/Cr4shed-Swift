@@ -27,8 +27,11 @@ static BOOL CR4IsThirdPartyTweakPath(const char *path) {
 }
 
 NSArray<NSString *> *CR4GetAllKnownTweakNames(void) {
-    NSMutableSet<NSString *> *tweaks = [NSMutableSet set];
-    NSFileManager *fm = [NSFileManager defaultManager];
+    static NSArray<NSString *> *cachedTweaks = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        NSMutableSet<NSString *> *tweaks = [NSMutableSet set];
+        NSFileManager *fm = [NSFileManager defaultManager];
     
     // 1. 扫描已知插件目录
     NSArray<NSString *> *tweakDirs = @[
@@ -59,7 +62,9 @@ NSArray<NSString *> *CR4GetAllKnownTweakNames(void) {
         }
     }
 
-    return [tweaks allObjects];
+        cachedTweaks = [tweaks allObjects];
+    });
+    return cachedTweaks;
 }
 
 NSString *CR4GetImageFromSymbol(NSString *symbol) {

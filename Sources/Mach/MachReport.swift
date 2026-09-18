@@ -90,7 +90,7 @@ enum MachReport {
             else { codes[1] = Int64(bitPattern: session.far) }
         }
 
-        if isNonFatal(report, sig: sig) { return }
+        if isNonFatal(report, sig: sig, excType: excType) { return }
 
         session.bundleID = IvarAccess.string(report, "_bundle_id") ?? ""
         let signalName = decodeSignal(report) ?? (sig == SIGABRT ? "SIGABRT" : "SIGNUNKN")
@@ -219,8 +219,11 @@ enum MachReport {
         session.images = []
     }
 
-    private static func isNonFatal(_ report: AnyObject, sig: Int32) -> Bool {
+    private static func isNonFatal(_ report: AnyObject, sig: Int32, excType: Int32) -> Bool {
         if sig == SIGABRT || sig == SIGSEGV || sig == SIGBUS || sig == SIGILL || sig == SIGTRAP || sig == SIGFPE {
+            return false
+        }
+        if excType == EXC_CRASH || excType == EXC_BAD_ACCESS || excType == EXC_BAD_INSTRUCTION || excType == EXC_ARITHMETIC || excType == EXC_BREAKPOINT || excType == EXC_SOFTWARE {
             return false
         }
         let sel = NSSelectorFromString("isExceptionNonFatal")
