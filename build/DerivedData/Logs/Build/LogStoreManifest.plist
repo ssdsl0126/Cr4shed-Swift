@@ -6,7 +6,7 @@
 	<integer>13</integer>
 	<key>logs</key>
 	<dict>
-		<key>0F0C61BC-1F67-470A-8B13-646CFE4FC0BA</key>
+		<key>044BB2A1-0A3D-43BE-B8E3-B0568323DA52</key>
 		<dict>
 			<key>className</key>
 			<string>IDECommandLineBuildLog</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>0F0C61BC-1F67-470A-8B13-646CFE4FC0BA.xcactivitylog</string>
+			<string>044BB2A1-0A3D-43BE-B8E3-B0568323DA52.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -40,15 +40,15 @@
 			<key>signature</key>
 			<string>Building project Cr4shed with scheme Cr4shed and configuration Release</string>
 			<key>timeStartedRecording</key>
-			<real>811403289.56791699</real>
+			<real>811406837.76330197</real>
 			<key>timeStoppedRecording</key>
-			<real>811403315.65537798</real>
+			<real>811406924.50995803</real>
 			<key>title</key>
 			<string>Building project Cr4shed with scheme Cr4shed and configuration Release</string>
 			<key>uniqueIdentifier</key>
-			<string>0F0C61BC-1F67-470A-8B13-646CFE4FC0BA</string>
+			<string>044BB2A1-0A3D-43BE-B8E3-B0568323DA52</string>
 		</dict>
-		<key>226C5256-9C94-4A43-8ADF-E2942996F0D5</key>
+		<key>37732C89-D38C-4406-BE53-9984AD03B118</key>
 		<dict>
 			<key>className</key>
 			<string>IDECommandLineBuildLog</string>
@@ -57,133 +57,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>226C5256-9C94-4A43-8ADF-E2942996F0D5.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-				<key>totalNumberOfAnalyzerIssues</key>
-				<integer>0</integer>
-				<key>totalNumberOfErrors</key>
-				<integer>0</integer>
-				<key>totalNumberOfTestFailures</key>
-				<integer>0</integer>
-				<key>totalNumberOfWarnings</key>
-				<integer>1018</integer>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>Cr4shed project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>Cr4shedMach</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Building project Cr4shed with scheme Cr4shedMach and configuration Release</string>
-			<key>timeStartedRecording</key>
-			<real>811403325.85846102</real>
-			<key>timeStoppedRecording</key>
-			<real>811403337.16802394</real>
-			<key>title</key>
-			<string>Building project Cr4shed with scheme Cr4shedMach and configuration Release</string>
-			<key>uniqueIdentifier</key>
-			<string>226C5256-9C94-4A43-8ADF-E2942996F0D5</string>
-		</dict>
-		<key>234F3FB0-6E6D-4356-B42E-889BC1D88654</key>
-		<dict>
-			<key>className</key>
-			<string>IDECommandLineBuildLog</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>234F3FB0-6E6D-4356-B42E-889BC1D88654.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-				<key>totalNumberOfAnalyzerIssues</key>
-				<integer>0</integer>
-				<key>totalNumberOfErrors</key>
-				<integer>0</integer>
-				<key>totalNumberOfTestFailures</key>
-				<integer>0</integer>
-				<key>totalNumberOfWarnings</key>
-				<integer>924</integer>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>Cr4shed project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>Cr4shedException</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Building project Cr4shed with scheme Cr4shedException and configuration Release</string>
-			<key>timeStartedRecording</key>
-			<real>811403319.23128903</real>
-			<key>timeStoppedRecording</key>
-			<real>811403323.19798303</real>
-			<key>title</key>
-			<string>Building project Cr4shed with scheme Cr4shedException and configuration Release</string>
-			<key>uniqueIdentifier</key>
-			<string>234F3FB0-6E6D-4356-B42E-889BC1D88654</string>
-		</dict>
-		<key>4759FA2B-FB2C-4871-925A-CF8491906127</key>
-		<dict>
-			<key>className</key>
-			<string>IDECommandLineBuildLog</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>4759FA2B-FB2C-4871-925A-CF8491906127.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-				<key>totalNumberOfAnalyzerIssues</key>
-				<integer>0</integer>
-				<key>totalNumberOfErrors</key>
-				<integer>0</integer>
-				<key>totalNumberOfTestFailures</key>
-				<integer>0</integer>
-				<key>totalNumberOfWarnings</key>
-				<integer>1016</integer>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>Cr4shed project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>Cr4shedJetsam</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Building project Cr4shed with scheme Cr4shedJetsam and configuration Release</string>
-			<key>timeStartedRecording</key>
-			<real>811403340.41382694</real>
-			<key>timeStoppedRecording</key>
-			<real>811403348.17327297</real>
-			<key>title</key>
-			<string>Building project Cr4shed with scheme Cr4shedJetsam and configuration Release</string>
-			<key>uniqueIdentifier</key>
-			<string>4759FA2B-FB2C-4871-925A-CF8491906127</string>
-		</dict>
-		<key>FC2CB691-1BDD-4C45-8FA7-38A363687B86</key>
-		<dict>
-			<key>className</key>
-			<string>IDECommandLineBuildLog</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>FC2CB691-1BDD-4C45-8FA7-38A363687B86.xcactivitylog</string>
+			<string>37732C89-D38C-4406-BE53-9984AD03B118.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -208,13 +82,139 @@
 			<key>signature</key>
 			<string>Building project Cr4shed with scheme cr4shedd and configuration Release</string>
 			<key>timeStartedRecording</key>
-			<real>811403350.89096701</real>
+			<real>811407041.837291</real>
 			<key>timeStoppedRecording</key>
-			<real>811403359.550102</real>
+			<real>811407091.76457798</real>
 			<key>title</key>
 			<string>Building project Cr4shed with scheme cr4shedd and configuration Release</string>
 			<key>uniqueIdentifier</key>
-			<string>FC2CB691-1BDD-4C45-8FA7-38A363687B86</string>
+			<string>37732C89-D38C-4406-BE53-9984AD03B118</string>
+		</dict>
+		<key>6143B64B-884A-43BB-869E-08C2C9DDBE0B</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>6143B64B-884A-43BB-869E-08C2C9DDBE0B.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>924</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Cr4shed project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Cr4shedException</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building project Cr4shed with scheme Cr4shedException and configuration Release</string>
+			<key>timeStartedRecording</key>
+			<real>811406935.70889103</real>
+			<key>timeStoppedRecording</key>
+			<real>811406959.03663504</real>
+			<key>title</key>
+			<string>Building project Cr4shed with scheme Cr4shedException and configuration Release</string>
+			<key>uniqueIdentifier</key>
+			<string>6143B64B-884A-43BB-869E-08C2C9DDBE0B</string>
+		</dict>
+		<key>EAEB5867-70A0-462E-9E6B-C2C87013300D</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>EAEB5867-70A0-462E-9E6B-C2C87013300D.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>1016</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Cr4shed project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Cr4shedJetsam</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building project Cr4shed with scheme Cr4shedJetsam and configuration Release</string>
+			<key>timeStartedRecording</key>
+			<real>811407003.85207295</real>
+			<key>timeStoppedRecording</key>
+			<real>811407032.96457303</real>
+			<key>title</key>
+			<string>Building project Cr4shed with scheme Cr4shedJetsam and configuration Release</string>
+			<key>uniqueIdentifier</key>
+			<string>EAEB5867-70A0-462E-9E6B-C2C87013300D</string>
+		</dict>
+		<key>FC63D66A-D83C-49A8-9DF9-38192D613BBC</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>FC63D66A-D83C-49A8-9DF9-38192D613BBC.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>926</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Cr4shed project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Cr4shedMach</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building project Cr4shed with scheme Cr4shedMach and configuration Release</string>
+			<key>timeStartedRecording</key>
+			<real>811406972.67836905</real>
+			<key>timeStoppedRecording</key>
+			<real>811406993.38242102</real>
+			<key>title</key>
+			<string>Building project Cr4shed with scheme Cr4shedMach and configuration Release</string>
+			<key>uniqueIdentifier</key>
+			<string>FC63D66A-D83C-49A8-9DF9-38192D613BBC</string>
 		</dict>
 	</dict>
 </dict>

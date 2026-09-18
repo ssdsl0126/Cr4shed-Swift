@@ -14,7 +14,6 @@
 		0EB1C010382C158993CEEC3A /* HookSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 770DA0AC0A0BD30D638E1603 /* HookSupport.m */; };
 		0EFC86CECB203C018689D911 /* PrivateXPC.h in Headers */ = {isa = PBXBuildFile; fileRef = 63999FFFE6EBE00CA25FB2EF /* PrivateXPC.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		12510E290EE8DCF094188C53 /* AppIcon29x29@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F4882CB95E691F33EAFA02C /* AppIcon29x29@1x.png */; };
-		144E9EA1CD2227518A8E4BC4 /* MachReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1511BFBA155D39827472E7B1 /* MachReport.swift */; };
 		15225C809ABDA5A209064F33 /* Cr4shedXPC.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B682E91C6A79018D95DC58 /* Cr4shedXPC.m */; };
 		15F9CBB46BC7DA4606C084E0 /* HookSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 770DA0AC0A0BD30D638E1603 /* HookSupport.m */; };
 		17F002FA184D9D42F4703347 /* dyn.c in Sources */ = {isa = PBXBuildFile; fileRef = 2ECED7B080F146F8810008EF /* dyn.c */; };
@@ -40,7 +39,6 @@
 		42E9FB39C0C7D6CD96733BFB /* Cr4shedXPC.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B682E91C6A79018D95DC58 /* Cr4shedXPC.m */; };
 		432E7BA8CD24CE9893CDBB0D /* Preferences.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFB463793F5EBFF2BE0B55D /* Preferences.m */; };
 		441AF321D153A53E04043A55 /* Preferences.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFB463793F5EBFF2BE0B55D /* Preferences.m */; };
-		4EE401FF04C0F178059C4A41 /* IvarAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18141EC3422B638F7257A3EC /* IvarAccess.swift */; };
 		4F4A278CEA0994BF5BDEF74B /* Culprit.m in Sources */ = {isa = PBXBuildFile; fileRef = 28AAC4D2006054607F54EDFC /* Culprit.m */; };
 		515610E521C54D15F87DAFD0 /* Cr4shedCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 505D79814F3117608C93E673 /* Cr4shedCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		55EE3319C69FBAABB911E45E /* Symbolication.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC1F9A6ADA57483B35594FB /* Symbolication.m */; };
@@ -63,12 +61,11 @@
 		89B50ECBC40B5AF692D657B7 /* RemoteMemory.m in Sources */ = {isa = PBXBuildFile; fileRef = DF67E2B0AFBED36C5E24BDFB /* RemoteMemory.m */; };
 		8C7067D5E8B6533A56FC3A9C /* LogListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D4A5CFD1F19C4AC5CDCE3 /* LogListView.swift */; };
 		8CA0F445275DAE768578AC16 /* JailbreakPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5B2908CAB44000BC262977 /* JailbreakPath.m */; };
-		8CEA42F11DDE4CF2F2871BC2 /* Mach-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 3130C4DE91BA2B3679073098 /* Mach-Bridging-Header.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9004187984F9CE7893116099 /* HookSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 770DA0AC0A0BD30D638E1603 /* HookSupport.m */; };
+		947716CF73076C8ECC3441D8 /* Cr4shedMach.mm in Sources */ = {isa = PBXBuildFile; fileRef = 02E9F083F4C111B3A138C041 /* Cr4shedMach.mm */; };
 		9A2604942A6A42FD69B907A7 /* AppIcon29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EC9357C5964DCA7D1D5DEF9D /* AppIcon29x29@2x.png */; };
 		9ABD0DA780024BB31C4038A2 /* Cr4shedException.m in Sources */ = {isa = PBXBuildFile; fileRef = A944D3DABBDA56A94094649F /* Cr4shedException.m */; };
 		9B62718FE39A887BD34A7A2A /* RuntimeCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D40E22466696BB717E35D8 /* RuntimeCall.m */; };
-		9F0E724C9A6B99E34F8A3CD2 /* MachStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CD635AD7922BE9E765DE58 /* MachStrings.swift */; };
 		A9C8B1099056B2815493CD8B /* CrashLogFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC52D2D77C6CFC9C2B443CF /* CrashLogFormat.m */; };
 		AF70E8D28E3913C9E4ADEFFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96DFCDBD06F499086894F1D0 /* Assets.xcassets */; };
 		B27671736FA43320FA5861F0 /* ProcessListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56A72D7721E74C5FCCCB19E /* ProcessListView.swift */; };
@@ -87,7 +84,6 @@
 		C8203053E1A86917F4C8CE62 /* FileShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF653115C30F29521A98E86 /* FileShare.swift */; };
 		CBCD663225BC933FC7CAF2FB /* AppIcon60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84137F04EDB4346D69CEA287 /* AppIcon60x60@2x.png */; };
 		CC848149B9DABAD0F79EB0BB /* BlacklistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3F82AAF59E78FEE606D649 /* BlacklistView.swift */; };
-		CD76BEF23066F39F7DF7FCD5 /* MachCtor.c in Sources */ = {isa = PBXBuildFile; fileRef = 0272C7DC51B0942952591D83 /* MachCtor.c */; };
 		CDA83AC89988E77C4A27108E /* CrashLogFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC52D2D77C6CFC9C2B443CF /* CrashLogFormat.m */; };
 		CE5DFCFAEFA1B636250FA2D5 /* Culprit.m in Sources */ = {isa = PBXBuildFile; fileRef = 28AAC4D2006054607F54EDFC /* Culprit.m */; };
 		CEE6414F5E3BA636A6230435 /* AppIcon76x76@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = F832B05E45A0880CFA2668B3 /* AppIcon76x76@1x.png */; };
@@ -95,32 +91,27 @@
 		D4BD0CD51E9DC651BC5F123D /* Cr4shedCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 505D79814F3117608C93E673 /* Cr4shedCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D506B5BFBF2242C1DAB75871 /* Cr4shedXPC.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B682E91C6A79018D95DC58 /* Cr4shedXPC.m */; };
 		D82F66E338C85CF7EDF96547 /* AppIcon40x40@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8377F2B658147C77EE73CB5F /* AppIcon40x40@1x.png */; };
-		D9AF40743E85BA6071BFC131 /* MachHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF56B18DDABD6D291253B1AC /* MachHooks.swift */; };
 		E3B0D1E709C70B11BD932F9A /* AppIcon20x20@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AA11712F70E3A639CD3499E /* AppIcon20x20@1x.png */; };
 		E51F229F4D58D669EF59E4E2 /* dyn.c in Sources */ = {isa = PBXBuildFile; fileRef = 2ECED7B080F146F8810008EF /* dyn.c */; };
 		EB9B76766F70E34904512BA4 /* Cr4shedXPC.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B682E91C6A79018D95DC58 /* Cr4shedXPC.m */; };
 		ED92C82CA25D15D1D9973291 /* Culprit.m in Sources */ = {isa = PBXBuildFile; fileRef = 28AAC4D2006054607F54EDFC /* Culprit.m */; };
 		F24C5CE3C8472741EF78B371 /* Symbolication.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC1F9A6ADA57483B35594FB /* Symbolication.m */; };
-		F7993BC534EDB8678ADC8DC9 /* CrashSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = C886E6E9B5895811C53BECF4 /* CrashSession.swift */; };
 		FD9C90DD8005F22ECBB4ACB3 /* LogViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DBE38FD68259357F525D49 /* LogViewer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0272C7DC51B0942952591D83 /* MachCtor.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = MachCtor.c; sourceTree = "<group>"; };
+		02E9F083F4C111B3A138C041 /* Cr4shedMach.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Cr4shedMach.mm; sourceTree = "<group>"; };
 		05DA41FF4A83271598F836D4 /* CrashLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrashLog.swift; sourceTree = "<group>"; };
 		09D40E22466696BB717E35D8 /* RuntimeCall.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeCall.m; sourceTree = "<group>"; };
 		0DEF19808B46A5D5D576FCC2 /* Cr4shedJetsam.dylib */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "compiled.mach-o.dylib"; path = Cr4shedJetsam.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EE81F2DD94BF73AD3EA81A3 /* Jetsam-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Jetsam-Bridging-Header.h"; sourceTree = "<group>"; };
 		1090C22F44170C84F279B294 /* ProcessStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessStore.swift; sourceTree = "<group>"; };
-		1511BFBA155D39827472E7B1 /* MachReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachReport.swift; sourceTree = "<group>"; };
-		18141EC3422B638F7257A3EC /* IvarAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IvarAccess.swift; sourceTree = "<group>"; };
 		1B3F82AAF59E78FEE606D649 /* BlacklistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlacklistView.swift; sourceTree = "<group>"; };
 		202529596164A6E45F80D931 /* JetsamCtor.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = JetsamCtor.c; sourceTree = "<group>"; };
 		28AAC4D2006054607F54EDFC /* Culprit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Culprit.m; sourceTree = "<group>"; };
 		2CF653115C30F29521A98E86 /* FileShare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileShare.swift; sourceTree = "<group>"; };
 		2DC1F9A6ADA57483B35594FB /* Symbolication.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Symbolication.m; sourceTree = "<group>"; };
 		2ECED7B080F146F8810008EF /* dyn.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = dyn.c; sourceTree = "<group>"; };
-		3130C4DE91BA2B3679073098 /* Mach-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mach-Bridging-Header.h"; sourceTree = "<group>"; };
 		315690CCC211EC05BA96F6EA /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		37F33E8ACAB65D95D923920B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		3FC52D2D77C6CFC9C2B443CF /* CrashLogFormat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CrashLogFormat.m; sourceTree = "<group>"; };
@@ -148,7 +139,6 @@
 		A0B682E91C6A79018D95DC58 /* Cr4shedXPC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cr4shedXPC.m; sourceTree = "<group>"; };
 		A944D3DABBDA56A94094649F /* Cr4shedException.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cr4shedException.m; sourceTree = "<group>"; };
 		AD812B0599C704C1E842A414 /* AppIcon20x20@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon20x20@3x.png"; sourceTree = "<group>"; };
-		AF56B18DDABD6D291253B1AC /* MachHooks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachHooks.swift; sourceTree = "<group>"; };
 		AF9B38F0A25FE60D32FEE95E /* App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "App-Bridging-Header.h"; sourceTree = "<group>"; };
 		B2D305FE2C71810858954CED /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		BDFB463793F5EBFF2BE0B55D /* Preferences.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Preferences.m; sourceTree = "<group>"; };
@@ -156,8 +146,6 @@
 		C0DDA3CD93798711C6EF603D /* Cr4shedMach.dylib */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "compiled.mach-o.dylib"; path = Cr4shedMach.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		C15ECDDBE8B584113623846D /* Cr4shedException.dylib */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "compiled.mach-o.dylib"; path = Cr4shedException.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7072574E6DCFD35D4DC0406 /* Cr4shed.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Cr4shed.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C886E6E9B5895811C53BECF4 /* CrashSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrashSession.swift; sourceTree = "<group>"; };
-		D0CD635AD7922BE9E765DE58 /* MachStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachStrings.swift; sourceTree = "<group>"; };
 		D1093F6C92F6220CDA5DBAEE /* AppIcon40x40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon40x40@2x.png"; sourceTree = "<group>"; };
 		D401223EC25F94C33918EECB /* AppIcon76x76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon76x76@2x.png"; sourceTree = "<group>"; };
 		D56A72D7721E74C5FCCCB19E /* ProcessListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessListView.swift; sourceTree = "<group>"; };
@@ -174,13 +162,7 @@
 		05E9F4CAAC3AB2959F5EFBB6 /* Mach */ = {
 			isa = PBXGroup;
 			children = (
-				C886E6E9B5895811C53BECF4 /* CrashSession.swift */,
-				18141EC3422B638F7257A3EC /* IvarAccess.swift */,
-				3130C4DE91BA2B3679073098 /* Mach-Bridging-Header.h */,
-				0272C7DC51B0942952591D83 /* MachCtor.c */,
-				AF56B18DDABD6D291253B1AC /* MachHooks.swift */,
-				1511BFBA155D39827472E7B1 /* MachReport.swift */,
-				D0CD635AD7922BE9E765DE58 /* MachStrings.swift */,
+				02E9F083F4C111B3A138C041 /* Cr4shedMach.mm */,
 			);
 			path = Mach;
 			sourceTree = "<group>";
@@ -366,7 +348,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4BD0CD51E9DC651BC5F123D /* Cr4shedCommon.h in Headers */,
-				8CEA42F11DDE4CF2F2871BC2 /* Mach-Bridging-Header.h in Headers */,
 				33D43B5BEF06F0F59FF935AE /* PrivateXPC.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -605,17 +586,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				947716CF73076C8ECC3441D8 /* Cr4shedMach.mm in Sources */,
 				82D8F10141077AFFD2747F6D /* Cr4shedXPC.m in Sources */,
 				312046C3F5B552FA510297BC /* CrashLogFormat.m in Sources */,
-				F7993BC534EDB8678ADC8DC9 /* CrashSession.swift in Sources */,
 				4F4A278CEA0994BF5BDEF74B /* Culprit.m in Sources */,
 				0EB1C010382C158993CEEC3A /* HookSupport.m in Sources */,
-				4EE401FF04C0F178059C4A41 /* IvarAccess.swift in Sources */,
 				6CD78308AA123D3BCA27F486 /* JailbreakPath.m in Sources */,
-				CD76BEF23066F39F7DF7FCD5 /* MachCtor.c in Sources */,
-				D9AF40743E85BA6071BFC131 /* MachHooks.swift in Sources */,
-				144E9EA1CD2227518A8E4BC4 /* MachReport.swift in Sources */,
-				9F0E724C9A6B99E34F8A3CD2 /* MachStrings.swift in Sources */,
 				441AF321D153A53E04043A55 /* Preferences.m in Sources */,
 				C2D6CFE236C00F0151B3CCC5 /* RemoteMemory.m in Sources */,
 				87D8AFCBBC882ED3E5A3548C /* RuntimeCall.m in Sources */,
@@ -901,6 +877,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EXECUTABLE_EXTENSION = dylib;
+				GCC_OPTIMIZATION_LEVEL = s;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -917,8 +894,6 @@
 				PRODUCT_NAME = Cr4shedMach;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Sources/Mach/Mach-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Osize";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1037,6 +1012,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EXECUTABLE_EXTENSION = dylib;
+				GCC_OPTIMIZATION_LEVEL = s;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1053,8 +1029,6 @@
 				PRODUCT_NAME = Cr4shedMach;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Sources/Mach/Mach-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Osize";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
