@@ -26,7 +26,7 @@ Cr4shed 是面向越獄 iOS 裝置的當機報告工具。它可以記錄 Object
 請連同 `libroot` 子模組一起複製儲存庫：
 
 ```sh
-git clone --recurse-submodules https://github.com/<owner>/<repository>.git
+git clone --recurse-submodules https://github.com/ssdsl0126/Cr4shed-Swift.git
 cd Cr4shed-Swift
 ```
 
@@ -76,3 +76,7 @@ DEBUG=1 make package
 ## 致謝
 
 原始 Cr4shed 專案由 Muirey03 建立。rootless 路徑支援由 [libroot](https://github.com/opa334/libroot) 提供。
+
+## 授權條款
+
+本專案依照 [Apache License 2.0](LICENSE) 發佈。

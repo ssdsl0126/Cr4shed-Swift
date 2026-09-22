@@ -26,7 +26,7 @@ This repository contains the Swift/Xcode rewrite of Cr4shed. It uses XcodeGen, n
 Clone the repository with its `libroot` submodule:
 
 ```sh
-git clone --recurse-submodules https://github.com/<owner>/<repository>.git
+git clone --recurse-submodules https://github.com/ssdsl0126/Cr4shed-Swift.git
 cd Cr4shed-Swift
 ```
 
@@ -76,3 +76,7 @@ Build products, local diagnostics, and the `TestTweak` test plugin are intention
 ## Credits
 
 The original Cr4shed project was created by Muirey03. Rootless path support is provided by [libroot](https://github.com/opa334/libroot).
+
+## License
+
+This project is distributed under the [Apache License 2.0](LICENSE).
