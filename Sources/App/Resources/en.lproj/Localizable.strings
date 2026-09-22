@@ -13,12 +13,29 @@
 "Crash Date" = "Crash Date";
 "Culprit" = "Culprit";
 "Reason" = "Reason";
+"Exception" = "Exception";
 "View Log" = "View Log";
 "Unknown" = "Unknown";
 "N/A" = "N/A";
 "Export Failed" = "Export Failed";
 "Log file does not exist." = "Log file does not exist.";
 "OK" = "OK";
+"Crash Records" = "Crash Records";
+"No Process Selected" = "No Process Selected";
+"Select a Process" = "Select a Process";
+"Choose a process to view its crash records." = "Choose a process to view its crash records.";
+"Show Sidebar" = "Show Sidebar";
+"Crash Details" = "Crash Details";
+"Detailed Log" = "Detailed Log";
+"Share" = "Share";
+"Host App" = "Host App";
+"Overview" = "Overview";
+"Raw Log" = "Raw Log";
+"Crash Overview" = "Crash Overview";
+"Copy Log" = "Copy Log";
+"Toggle Line Wrap" = "Toggle Line Wrap";
+"Select a Crash Report" = "Select a Crash Report";
+"Choose a crash record to view its details." = "Choose a crash record to view its details.";
 
 /* Settings View */
 "General" = "General";

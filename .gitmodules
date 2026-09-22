@@ -1,0 +1,3 @@
+[submodule "Vendor/libroot"]
+	path = Vendor/libroot
+	url = https://github.com/opa334/libroot.git

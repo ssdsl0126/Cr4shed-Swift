@@ -137,10 +137,9 @@ NSString *CR4DetermineCulprit(NSArray *symbols) {
 NSArray<NSString *> *CR4HardBlacklist(void) {
     return @[
         @"ProtectedCloudKeySyncing", @"gssc", @"awdd", @"biometrickitd", @"spindump",
-        @"keybagd", @"ReportMemoryException", @"ReportCrash", @"cr4shedd", @"nsurlsessiond",
-        @"locationd", @"coreduetd", @"mDNSResponder", @"hangreporter", @"nanoregistrylaunchd",
-        @"nanoregistryd", @"mobilewatchdog", @"misd", @"dasd", @"passd", @"CircleJoinRequested",
-        @"suggestd", @"osanalyticshelper", @"analyticsd"
+        @"keybagd", @"ReportMemoryException", @"nsurlsessiond", @"locationd", @"coreduetd",
+        @"mDNSResponder", @"hangreporter", @"nanoregistrylaunchd", @"nanoregistryd",
+        @"mobilewatchdog", @"misd", @"dasd", @"passd", @"CircleJoinRequested", @"suggestd"
     ];
 }
 

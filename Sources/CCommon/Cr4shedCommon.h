@@ -7,6 +7,16 @@
 #include <mach/mach.h>
 #import <Foundation/Foundation.h>
 
+#ifndef CR4_DEBUG_LOGGING
+#define CR4_DEBUG_LOGGING 0
+#endif
+
+#if CR4_DEBUG_LOGGING
+#define CR4DebugLog(...) NSLog(__VA_ARGS__)
+#else
+#define CR4DebugLog(...) do { } while (0)
+#endif
+
 #define CR4SHED_DAEMON_MACH "com.muirey03.cr4shedd"
 #define CR4SHED_PREFS_ID "com.muirey03.cr4shedprefs"
 #define CR4SHED_GUI_BUNDLE "com.muirey03.cr4shedgui"
@@ -15,6 +25,7 @@
 #define kSortingMethod @"SortingMethod"
 #define kProcessBlacklist @"ProcessBlacklist"
 #define kEnableJetsam @"EnableJetsam"
+#define kRecordExtensionCheckInTimeouts @"RecordExtensionCheckInTimeouts"
 
 #define CR4ProcsNeedRefreshNotificationName @"com.muirey03.cr4shed-procsNeedRefresh"
 #define CR4BlacklistDidChangeNotificationName @"com.muirey03.cr4shed-blacklistDidChange"
@@ -29,7 +40,8 @@ typedef NS_ENUM(int64_t, CR4XPCMessageID) {
     CR4XPCWriteString = 1,
     CR4XPCIsBlacklisted = 2,
     CR4XPCShouldLogJetsam = 3,
-    CR4XPCStringFromTime = 4
+    CR4XPCStringFromTime = 4,
+    CR4XPCMachReady = 5
 };
 
 #ifdef __cplusplus
@@ -46,13 +58,17 @@ void CR4HookMessage(Class cls, SEL sel, IMP imp, IMP *orig);
 
 NSDictionary *CR4XPCSend(CR4XPCMessageID messageID, NSDictionary *userInfo);
 NSString *CR4WriteLog(NSString *contents, NSString *filename);
+NSString *CR4WriteLogViaDaemon(NSString *contents, NSString *filename, NSString *_Nullable notificationContent);
 NSString *CR4LocalWriteLog(NSString *contents, NSString *filename);
+NSString *_Nullable CR4LocalWriteLogForEvent(NSString *contents, NSString *filename, NSString *eventID);
 void CR4SendNotification(NSString *content, NSString *logPath);
+void CR4ReportMachReady(NSString *targetClass, int64_t hookCount);
+int CR4ApplySandboxProfile(NSString *profileName);
 bool CR4IsProcessBlacklisted(NSString *procName);
 bool CR4ShouldLogJetsam(void);
 NSString *CR4StringFromTime(time_t t, CR4DateFormat type);
 void *CR4XPCCreateMachService(const char *name, uint64_t flags);
-void CR4RunXPCListener(void *_Nullable (^ _Nonnull handler)(void *_Nonnull message));
+void CR4RunXPCListener(NSDictionary<NSString *, id> *_Nonnull (^ _Nonnull handler)(int64_t messageID, NSDictionary<NSString *, id> *_Nonnull userInfo));
 
 NSString *CR4StringFromDate(NSDate *date, CR4DateFormat type);
 NSString *CR4DeviceVersion(void);
@@ -73,6 +89,7 @@ char *CR4RReadString(mach_port_t task, vm_address_t addr);
 uint64_t CR4RRead64(mach_port_t task, mach_vm_address_t where);
 uint32_t CR4RRead32(mach_port_t task, mach_vm_address_t where);
 mach_vm_address_t CR4TaskGetImageInfos(mach_port_t task);
+NSString *_Nullable CR4TaskMemoryDescription(mach_port_t task);
 
 NSString *CR4NameForLocalSymbol(NSNumber *addrNum, uint64_t *outOffset);
 NSArray *CR4SymbolicatedException(NSException *e);
@@ -84,10 +101,13 @@ bool CR4IsHardBlacklisted(NSString *procName);
 
 NSArray *CR4PrefsBlacklist(void);
 bool CR4PrefsEnableJetsam(void);
+bool CR4PrefsRecordExtensionCheckInTimeouts(void);
 NSString *CR4PrefsSortingMethod(void);
 void CR4PrefsSetObject(id value, NSString *key);
 
 BOOL CR4BoolMessage(id object, SEL sel);
+id _Nullable CR4CreateNotificationCenter(NSString *bundleID);
+NSDictionary *_Nullable CR4DecodeExceptionDetails(id report);
 NSString *CR4ReadStringAtTaskAddress(id report, uint64_t addr);
 
 typedef struct {

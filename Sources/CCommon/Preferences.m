@@ -20,6 +20,13 @@ bool CR4PrefsEnableJetsam(void) {
     return [value boolValue];
 }
 
+bool CR4PrefsRecordExtensionCheckInTimeouts(void) {
+    id value = CR4LoadPrefs()[kRecordExtensionCheckInTimeouts];
+    // 这类报告通常由注入器启动超时批量产生，默认不写入 Cr4shed。
+    if (value == nil) return false;
+    return [value boolValue];
+}
+
 NSString *CR4PrefsSortingMethod(void) {
     id value = CR4LoadPrefs()[kSortingMethod];
     return [value isKindOfClass:[NSString class]] ? value : @"Date";

@@ -13,12 +13,29 @@
 "Crash Date" = "崩溃时间";
 "Culprit" = "罪魁祸首";
 "Reason" = "崩溃原因";
+"Exception" = "异常";
 "View Log" = "查看详细日志";
 "Unknown" = "未知";
 "N/A" = "无";
 "Export Failed" = "导出失败";
 "Log file does not exist." = "日志文件不存在。";
 "OK" = "好";
+"Crash Records" = "崩溃记录";
+"No Process Selected" = "未选择进程";
+"Select a Process" = "请选择进程";
+"Choose a process to view its crash records." = "选择一个进程以查看崩溃记录。";
+"Show Sidebar" = "显示侧边栏";
+"Crash Details" = "崩溃详情";
+"Detailed Log" = "详细日志";
+"Share" = "共享";
+"Host App" = "所属 App";
+"Overview" = "概览";
+"Raw Log" = "原始日志";
+"Crash Overview" = "崩溃概览";
+"Copy Log" = "复制日志";
+"Toggle Line Wrap" = "切换自动换行";
+"Select a Crash Report" = "请选择崩溃记录";
+"Choose a crash record to view its details." = "选择一条崩溃记录以查看详情。";
 
 /* 设置页面 */
 "General" = "通用";

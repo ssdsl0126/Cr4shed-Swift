@@ -5,18 +5,25 @@ final class CrashSession: NSObject {
     var crashTime: time_t = time(nil)
     var far: UInt64 = 0
     var realCrashedNumber: Int = -1
+    var realCrashedThreadID: UInt64 = 0
+    var threadRecoveryNote: String?
     var hasBeenHandled = false
     var didGenerate = false
+    var ignored = false
     var stackSymbols: [String] = []
+    var lastExceptionStackSymbols: [String] = []
     var registers: [(String, UInt64)] = []
     var images: [String] = []
     var swiftError: String?
     var threadName: String?
+    var processID: Int32 = 0
     var processName: String = ""
     var bundleID: String = ""
     var exceptionType: String = ""
     var exceptionSubtype: String = ""
     var exceptionCodes: String = ""
+    var isResourceEvent = false
+    var memoryInfo: String?
     var vmInfo: String?
     var threadNum: UInt64 = 0
     var version: String = ""

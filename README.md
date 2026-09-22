@@ -1,21 +1,78 @@
-## Cr4shed
+# Cr4shed
 
-Swift 重写版（Xcode，无 Theos）。去掉 CrossOverIPC / libnotifications / Cephei / FRPreferences。iOS 15–26，路径走 libroot，IPC 用原生 XPC，通知由 cr4shedd 直发。
+[English](README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md)
 
-开发计划见 DEVELOPMENT_PLAN.md。
+Cr4shed is a crash reporter for jailbroken iOS devices. It records Objective-C exceptions, Mach exceptions, and memory-pressure terminations, then presents the resulting reports in a SwiftUI application.
 
-## 构建
+This repository contains the Swift/Xcode rewrite of Cr4shed. It uses XcodeGen, native XPC, and the upstream [libroot](https://github.com/opa334/libroot) project for rootless path handling. The packaged tweak declares MobileSubstrate and libSandy as its runtime dependencies.
 
-需要 Xcode、XcodeGen、ldid、dpkg-deb。
+## Features
 
-    make -f Makefile.swift.mk
+- `Cr4shedException.dylib` records uncaught Objective-C exceptions.
+- `Cr4shedMach.dylib` integrates with `ReportCrash` for Mach-level crash reports.
+- `Cr4shedJetsam.dylib` integrates with `ReportMemoryException` for memory-pressure reports.
+- `cr4shedd` stores reports and delivers notifications through native XPC.
+- The SwiftUI app supports report browsing, filtering, sorting, blacklist management, and file sharing.
+- The project targets iOS 15.0 and later on `arm64` and `arm64e` devices.
 
-产物：packages/com.muirey03.cr4shed_5.0.0_iphoneos-arm64.deb
+## Requirements
 
-不依赖 CrossOverIPC 与 libnotifications。钩子库需要 Substrate / ElleKit / libhooker 之一。
+- macOS with Xcode 16 or later
+- [XcodeGen](https://github.com/yonaskolb/XcodeGen)
+- `ldid`
+- `dpkg-deb`
+- A jailbroken iOS device with MobileSubstrate and libSandy available at runtime
 
-## 真机
+Clone the repository with its `libroot` submodule:
 
-在 iOS 15、16、26 上验收。17/18 仅对照 headers.82flex.com 头文件，未真机。
+```sh
+git clone --recurse-submodules https://github.com/<owner>/<repository>.git
+cd Cr4shed-Swift
+```
 
-原作者 Muirey03。rootless 适配曾由 mhster_nice 等完成。
+If the repository has already been cloned, initialize the submodule with:
+
+```sh
+git submodule update --init --recursive
+```
+
+## Build
+
+Generate the Xcode project and build the Debian package:
+
+```sh
+make package
+```
+
+The package is written to:
+
+```text
+packages/com.muirey03.cr4shed_5.0.0_iphoneos-arm64.deb
+```
+
+For a debug build with additional logging:
+
+```sh
+DEBUG=1 make package
+```
+
+Use `make clean` to remove generated Xcode and packaging output.
+
+## Repository layout
+
+| Path | Purpose |
+| --- | --- |
+| `Sources/App` | SwiftUI application |
+| `Sources/CCommon` | Shared Objective-C/C helpers and native XPC bridge |
+| `Sources/Exception` | Objective-C exception capture tweak |
+| `Sources/Mach` | `ReportCrash` integration |
+| `Sources/Jetsam` | `ReportMemoryException` integration |
+| `Sources/Daemon` | Report storage and notification daemon |
+| `Sources/Packaging` | Debian layout, launch daemon, and tweak filters |
+| `Vendor/libroot` | Git submodule linked to the upstream libroot repository |
+
+Build products, local diagnostics, and the `TestTweak` test plugin are intentionally excluded by `.gitignore`.
+
+## Credits
+
+The original Cr4shed project was created by Muirey03. Rootless path support is provided by [libroot](https://github.com/opa334/libroot).

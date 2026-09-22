@@ -29,6 +29,10 @@ settings:
     - $(SRCROOT)/Libraries
   OTHER_CFLAGS: "$(inherited) -DIPHONEOS_ARM64 -Wno-unguarded-availability"
   OTHER_SWIFT_FLAGS: "$(inherited) -Osize"
+  GCC_PREPROCESSOR_DEFINITIONS: "$(inherited) CR4_DEBUG_LOGGING=$(CR4_DEBUG_LOGGING)"
+  SWIFT_ACTIVE_COMPILATION_CONDITIONS: "$(inherited) $(CR4_SWIFT_LOGGING_CONDITION)"
+  CR4_DEBUG_LOGGING: "0"
+  CR4_SWIFT_LOGGING_CONDITION: ""
 
 targets:
   Cr4shedException:
@@ -45,7 +49,7 @@ targets:
       EXECUTABLE_EXTENSION: dylib
       GENERATE_INFOPLIST_FILE: YES
       SKIP_INSTALL: YES
-      OTHER_LDFLAGS: ["-framework", "Foundation", "-framework", "CoreSymbolication"]
+      OTHER_LDFLAGS: ["-framework", "Foundation", "-Wl,-ignore_auto_link_library,swiftXPC"]
       GCC_OPTIMIZATION_LEVEL: s
       SWIFT_COMPILATION_MODE: wholemodule
 
@@ -65,7 +69,7 @@ targets:
       SKIP_INSTALL: YES
       SWIFT_OBJC_BRIDGING_HEADER: Sources/Mach/Mach-Bridging-Header.h
       SWIFT_OPTIMIZATION_LEVEL: "-Osize"
-      OTHER_LDFLAGS: ["-framework", "Foundation", "-framework", "CoreSymbolication"]
+      OTHER_LDFLAGS: ["-framework", "Foundation", "-Wl,-ignore_auto_link_library,swiftXPC"]
 
   Cr4shedJetsam:
     type: library.dynamic
@@ -83,7 +87,7 @@ targets:
       SKIP_INSTALL: YES
       SWIFT_OBJC_BRIDGING_HEADER: Sources/Jetsam/Jetsam-Bridging-Header.h
       SWIFT_OPTIMIZATION_LEVEL: "-Osize"
-      OTHER_LDFLAGS: ["-framework", "Foundation", "-framework", "CoreSymbolication"]
+      OTHER_LDFLAGS: ["-framework", "Foundation", "-Wl,-ignore_auto_link_library,swiftXPC"]
 
   cr4shedd:
     type: tool
@@ -98,7 +102,8 @@ targets:
       GENERATE_INFOPLIST_FILE: YES
       SKIP_INSTALL: YES
       SWIFT_OBJC_BRIDGING_HEADER: Sources/Daemon/Daemon-Bridging-Header.h
-      OTHER_LDFLAGS: ["-framework", "Foundation", "-framework", "UserNotifications", "-framework", "CoreSymbolication"]
+      LD_RUNPATH_SEARCH_PATHS: ["$(inherited)", "/usr/lib/swift", "@executable_path/Frameworks", "@executable_path/../lib"]
+      OTHER_LDFLAGS: ["-framework", "Foundation", "-framework", "UserNotifications", "-Wl,-ignore_auto_link_library,swiftXPC"]
 
   Cr4shed:
     type: application
@@ -118,5 +123,5 @@ targets:
       SKIP_INSTALL: YES
       SWIFT_OBJC_BRIDGING_HEADER: Sources/App/App-Bridging-Header.h
       TARGETED_DEVICE_FAMILY: "1,2"
-      OTHER_LDFLAGS: ["-framework", "Foundation", "-framework", "UIKit", "-framework", "CoreSymbolication"]
+      OTHER_LDFLAGS: ["-framework", "Foundation", "-framework", "UIKit", "-Wl,-ignore_auto_link_library,swiftXPC"]
       ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon

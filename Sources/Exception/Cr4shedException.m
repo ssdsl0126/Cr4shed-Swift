@@ -103,14 +103,14 @@ static void CR4CreateNSExceptionLog(NSException *e) {
 
 static void CR4UnhandledExceptionHandler(NSException *e) {
     @autoreleasepool {
-        NSLog(@"[Cr4shedException] Handling uncaught NSException: %@ (reason: %@) in %@", e.name, e.reason, [[NSProcessInfo processInfo] processName]);
+        CR4DebugLog(@"[Cr4shedException] Handling uncaught NSException: %@ (reason: %@) in %@", e.name, e.reason, [[NSProcessInfo processInfo] processName]);
         static BOOL hasCrashed = NO;
         if (hasCrashed) exit(EXIT_FAILURE);
         hasCrashed = YES;
         @try {
             CR4CreateNSExceptionLog(e);
         } @catch (NSException *ex) {
-            NSLog(@"[Cr4shedException] Error creating NSException log: %@", ex);
+            CR4DebugLog(@"[Cr4shedException] Error creating NSException log: %@", ex);
             exit(EXIT_FAILURE);
         }
         if (oldHandler) oldHandler(e);
@@ -121,6 +121,8 @@ __attribute__((constructor))
 static void CR4ExceptionInit(void) {
     @autoreleasepool {
         NSString *procName = [[NSProcessInfo processInfo] processName];
+        // 仅在自身进程启动时跳过注入，不干扰其他应用和守护进程的崩溃捕获
+        if ([procName isEqualToString:@"ReportCrash"] || [procName isEqualToString:@"cr4shedd"]) return;
         if (CR4IsHardBlacklisted(procName)) return;
         
         // 直接安全注册未捕获异常处理，不再使用 MSHookFunction 改写 Foundation 共享缓存

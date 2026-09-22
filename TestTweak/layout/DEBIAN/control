@@ -1,9 +1,0 @@
-Package: com.test.cr4crashtest
-Name: Cr4 Crash Test
-Depends: firmware (>= 15.0), mobilesubstrate | org.coolstar.libhooker | orig.appex.ellekit
-Version: 1.0.0
-Architecture: iphoneos-arm64
-Description: SpringBoard floating button to trigger deliberate crashes and test Cr4shed reporting.
-Maintainer: Tester
-Author: Tester
-Section: Tweaks

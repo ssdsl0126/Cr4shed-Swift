@@ -13,12 +13,29 @@
 "Crash Date" = "クラッシュ日時";
 "Culprit" = "原因となったファイル";
 "Reason" = "クラッシュの理由";
+"Exception" = "例外";
 "View Log" = "詳細ログを表示";
 "Unknown" = "不明";
 "N/A" = "なし";
 "Export Failed" = "エクスポート失敗";
 "Log file does not exist." = "ログファイルが存在しません。";
 "OK" = "OK";
+"Crash Records" = "クラッシュ記録";
+"No Process Selected" = "プロセスが選択されていません";
+"Select a Process" = "プロセスを選択";
+"Choose a process to view its crash records." = "クラッシュ記録を表示するプロセスを選択してください。";
+"Show Sidebar" = "サイドバーを表示";
+"Crash Details" = "クラッシュの詳細";
+"Detailed Log" = "詳細ログ";
+"Share" = "共有";
+"Host App" = "所属アプリ";
+"Overview" = "概要";
+"Raw Log" = "元のログ";
+"Crash Overview" = "クラッシュ概要";
+"Copy Log" = "ログをコピー";
+"Toggle Line Wrap" = "行の折り返しを切り替え";
+"Select a Crash Report" = "クラッシュ記録を選択";
+"Choose a crash record to view its details." = "詳細を表示するクラッシュ記録を選択してください。";
 
 /* 設定画面 */
 "General" = "一般";

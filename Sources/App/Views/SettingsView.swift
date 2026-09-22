@@ -4,6 +4,7 @@ struct SettingsView: View {
     @EnvironmentObject var store: ProcessStore
     @State private var sorting = CR4PrefsSortingMethod() as String? ?? "Date"
     @State private var jetsam = CR4PrefsEnableJetsam()
+    @State private var extensionCheckInTimeouts = CR4PrefsRecordExtensionCheckInTimeouts()
 
     var body: some View {
         List {
@@ -20,6 +21,10 @@ struct SettingsView: View {
                 Toggle("Log Jetsam Events", isOn: $jetsam)
                     .onChange(of: jetsam) { value in
                         CR4PrefsSetObject(NSNumber(value: value), kEnableJetsam)
+                    }
+                Toggle("Log Extension Check-in Timeouts", isOn: $extensionCheckInTimeouts)
+                    .onChange(of: extensionCheckInTimeouts) { value in
+                        CR4PrefsSetObject(NSNumber(value: value), kRecordExtensionCheckInTimeouts)
                     }
             }
             Section("Credits") {

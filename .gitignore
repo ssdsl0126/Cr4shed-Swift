@@ -1,0 +1,22 @@
+# macOS
+.DS_Store
+
+# Xcode / XcodeGen
+/build/
+/.build/
+/DerivedData/
+/*.xcuserstate
+/xcuserdata/
+/Cr4shed.xcodeproj/
+
+# Packaging outputs
+/.package/
+/packages/
+*.deb
+
+# Local-only development tools
+/Scripts/Diagnostics/
+/TestTweak/
+
+# Swift Package Manager metadata
+/.swiftpm/

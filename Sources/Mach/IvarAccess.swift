@@ -9,7 +9,9 @@ enum IvarAccess {
 
     static func objectValue(_ object: AnyObject, _ name: String) -> AnyObject? {
         guard let cls = object_getClass(object),
-              let ivar = class_getInstanceVariable(cls, name) else { return nil }
+              let ivar = class_getInstanceVariable(cls, name),
+              let encoding = ivar_getTypeEncoding(ivar),
+              encoding.pointee == 64 else { return nil } // 只读取 @ 编码的对象，防止私有字段变更为标量或指针。
         return object_getIvar(object, ivar) as AnyObject?
     }
 

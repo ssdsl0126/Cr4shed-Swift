@@ -1,6 +1,6 @@
 Package: com.muirey03.cr4shed
 Name: Cr4shed
-Depends: firmware (>= 15.0), mobilesubstrate | org.coolstar.libhooker | orig.appex.ellekit
+Depends: firmware (>= 15.0), mobilesubstrate, com.opa334.libsandy (>= 1.1.6-4)
 Version: 5.0.0
 Architecture: iphoneos-arm64
 Description: A modern crash reporter for iOS, rewritten in Swift.

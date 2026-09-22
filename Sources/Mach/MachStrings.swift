@@ -20,7 +20,7 @@ enum MachStrings {
         case EXC_CORPSE_NOTIFY: type = "EXC_CORPSE_NOTIFY"
         default: type = "EXC_UNKNOWN"
         }
-        return "\(type) (\(signal))"
+        return signal.isEmpty ? type : "\(type) (\(signal))"
     }
 
     static func codeString(type: Int32, codes: [Int64]) -> String? {
@@ -39,6 +39,21 @@ enum MachStrings {
             else if code == 0x10002 || code == 6 { name = "SIGABRT / abort()" }
             else if code == 0x10003 { name = "EXC_SOFT_SIGNAL" }
             else { name = String(format: "0x%llx", code) }
+        } else if type == EXC_RESOURCE {
+            let raw = UInt64(bitPattern: code)
+            let resourceType = (raw >> 61) & 0x7
+            let flavor = (raw >> 58) & 0x7
+            if resourceType == 3 {
+                let limitMB = raw & 0x1fff
+                switch flavor {
+                case 1: name = "RESOURCE_TYPE_MEMORY / FLAVOR_HIGH_WATERMARK (limit: \(limitMB) MB)"
+                case 2: name = "RESOURCE_TYPE_MEMORY / FLAVOR_DIAG_MEMLIMIT (limit: \(limitMB) MB)"
+                case 3: name = "RESOURCE_TYPE_MEMORY / FLAVOR_CONCLAVE_LIMIT (limit: \(limitMB) MB)"
+                default: name = "RESOURCE_TYPE_MEMORY / flavor \(flavor)"
+                }
+            } else {
+                name = "resource type \(resourceType) / flavor \(flavor)"
+            }
         } else {
             name = String(format: "0x%llx", code)
             hasSub = (codes.count > 1 && subcode != 0)
@@ -66,6 +81,21 @@ enum MachStrings {
         }
     }
 
+    static func signalName(_ sig: Int32) -> String? {
+        switch sig {
+        case SIGSEGV: return "SIGSEGV"
+        case SIGBUS: return "SIGBUS"
+        case SIGILL: return "SIGILL"
+        case SIGFPE: return "SIGFPE"
+        case SIGSYS: return "SIGSYS"
+        case SIGPIPE: return "SIGPIPE"
+        case SIGABRT: return "SIGABRT"
+        case SIGKILL: return "SIGKILL"
+        case SIGTRAP: return "SIGTRAP"
+        default: return nil
+        }
+    }
+
     static func vmInfo(task: mach_port_t, type: Int32, codes: [Int64]) -> String? {
         guard type == EXC_BAD_ACCESS, codes.count > 1 else { return nil }
         let addr = vm_address_t(bitPattern: Int(truncatingIfNeeded: codes[1]))
@@ -80,6 +110,13 @@ enum MachStrings {
         let kr = withUnsafeMutablePointer(to: &info) { ptr in
             ptr.withMemoryRebound(to: Int32.self, capacity: Int(count)) { rebound in
                 vm_region_64(task, &address, &size, VM_REGION_BASIC_INFO_64, rebound, &count, &obj)
+            }
+        }
+        defer {
+            // MACH_PORT_DEAD 在 C 中是 (mach_port_name_t)~0；Xcode 27 会把宏按 -1
+            // 导入 Swift，无法与 UInt32 类型的 mach_port_t 比较。
+            if obj != MACH_PORT_NULL && obj != mach_port_t.max {
+                mach_port_deallocate(mach_task_self_, obj)
             }
         }
         guard kr == KERN_SUCCESS else { return nil }

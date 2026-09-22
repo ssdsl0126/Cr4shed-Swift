@@ -1,7 +1,10 @@
 # Cr4shed Swift - 现代化纯 Swift/Xcode 重构版本
 # 不依赖 Theos，使用 XcodeGen + xcodebuild 构建
 
-.PHONY: all generate package clean testtweak
+DEBUG ?= 0
+export DEBUG
+
+.PHONY: all generate package clean
 
 all: package
 

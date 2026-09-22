@@ -13,12 +13,29 @@
 "Crash Date" = "崩潰時間";
 "Culprit" = "罪魁禍首";
 "Reason" = "崩潰原因";
+"Exception" = "例外";
 "View Log" = "查看詳細日誌";
 "Unknown" = "未知";
 "N/A" = "無";
 "Export Failed" = "導出失敗";
 "Log file does not exist." = "日誌檔案不存在。";
 "OK" = "好";
+"Crash Records" = "崩潰記錄";
+"No Process Selected" = "未選擇進程";
+"Select a Process" = "請選擇進程";
+"Choose a process to view its crash records." = "選擇一個進程以查看崩潰記錄。";
+"Show Sidebar" = "顯示側邊欄";
+"Crash Details" = "崩潰詳情";
+"Detailed Log" = "詳細日誌";
+"Share" = "共享";
+"Host App" = "所屬 App";
+"Overview" = "概覽";
+"Raw Log" = "原始日誌";
+"Crash Overview" = "崩潰概覽";
+"Copy Log" = "複製日誌";
+"Toggle Line Wrap" = "切換自動換行";
+"Select a Crash Report" = "請選擇崩潰記錄";
+"Choose a crash record to view its details." = "選擇一條崩潰記錄以查看詳情。";
 
 /* 設定頁面 */
 "General" = "一般";
